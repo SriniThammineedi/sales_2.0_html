@@ -1,0 +1,26 @@
+Expandable Search Bar
+https://codepen.io/jkantner/pen/eYmvvqQ
+
+Animated Search bar
+https://codepen.io/jkantner/pen/eYJboxN
+
+Infinite List scroll horizontal
+https://codepen.io/ludviglindblom/pen/GRebXJW
+
+Glowing Button
+https://codepen.io/hexagoncircle/pen/MWMqXbK
+
+Animated Number input
+https://codepen.io/jkantner/pen/wvdJqQv
+https://codepen.io/jkantner/pen/oNGzBmm
+
+Responsive Div Table
+https://codepen.io/tuanpa1987/pen/ZjvGLy
+
+Password hide
+https://codepen.io/jh3y/pen/wvNpQJe
+
+Fire notification animation
+https://codepen.io/AlikinVV/pen/wOyGNJ
+
+

@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Way2News Sales Panel | Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fontawesome Icons Kit -->
+    <script
+      src="https://kit.fontawesome.com/75b0afa4e1.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+    />
+
+    <link rel="stylesheet" href="/assets/css/animate.min.css" />
+
+    <!-- Theme Style Sheet -->
+    <link rel="stylesheet" href="./assets/css/main-styles.css" />
+  </head>
+
+  <body>
+    <!-- 1. TOP STICKY HEADER -->
+    <header class="top-sticky-header">
+      <div class="logo">
+        <img src="./assets/images/w2n-logo.svg" alt="Way2News" />
+        <button id="sidebarToggle">
+          <img src="./assets/images/hamberger-menu.svg" alt="" />
+        </button>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search here..." />
+        <button class="searchBtn">
+          <img src="./assets/images/search-icon-light.svg" alt="" />
+        </button>
+      </div>
+      <div class="header-actions">
+        <div class="cstmSelect">
+          <img src="/assets/images/hand-shake-icon.svg" alt="" />
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Sales
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#" class="dropdown-item">Sales</a></li>
+              <li><a href="#" class="dropdown-item">B2B</a></li>
+              <li><a href="#" class="dropdown-item">Finance</a></li>
+              <li><a href="#" class="dropdown-item">CST</a></li>
+              <li><a href="#" class="dropdown-item">Legal</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="head-notifications">
+          <img src="./assets/images/head-notification-bell.svg" alt="" />
+          <div class="interMenu">
+            <div id="showNotifications">
+              <div class="header">
+                <h6>Notifications<em>8</em></h6>
+                <button id="closeButton">
+                  <img src="/assets/images/close-red.svg" alt="" />
+                </button>
+              </div>
+              <div class="notifyBody">
+                <ol class="notifications">
+                  <li>
+                    <p>Your order #984926A approved by head of finance.</p>
+                    <div class="actions">
+                      <button class="btn-read">Mark As Read</button>
+                      <button class="btn-view">View Order</button>
+                    </div>
+                  </li>
+                  <li>
+                    <p>Your order #984926A approved by head of finance.</p>
+                    <div class="actions">
+                      <button class="btn-read">Mark As Read</button>
+                      <button class="btn-view">View Order</button>
+                    </div>
+                  </li>
+                  <li>
+                    <p>Your order #984926A approved by head of finance.</p>
+                    <div class="actions">
+                      <button class="btn-read">Mark As Read</button>
+                      <button class="btn-view">View Order</button>
+                    </div>
+                  </li>
+                  <li>
+                    <p>Your order #984926A approved by head of finance.</p>
+                    <div class="actions">
+                      <button class="btn-read">Mark As Read</button>
+                      <button class="btn-view">View Order</button>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+              <div class="notifyFooter">
+                <button class="btn-gradient">Show All Notifications</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="user-profile">
+          <img
+            src="/assets/images/profile-pic.png"
+            alt="User Avatar"
+            class="avatar"
+          />
+          <div class="interMenu">
+            <div id="showProfileMenu">
+              <div class="header">
+                <h6>Profile</h6>
+                <button id="closeBtn">
+                  <img src="/assets/images/close-red.svg" alt="" />
+                </button>
+              </div>
+              <div class="profileBody">
+                <a href="" target="_blank"
+                  ><i class="fa-solid fa-marker"></i>
+                  <span>Update Profile</span></a
+                >
+                <a href="" target="_blank"
+                  ><i class="fa-solid fa-lock-open"></i>
+                  <span>Change Password</span></a
+                >
+                <a href="" target="_blank"
+                  ><i class="fa-solid fa-sliders"></i>
+                  <span>Account Settings</span></a
+                >
+                <a href="" target="_blank" class="logout"
+                  ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                  <span>Logout</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="main-body">
+      <!-- 2. LEFT SIDE NAVIGATION -->
+      <aside class="sidebar">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Growth Management
+              </button>
+            </h3>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <ul>
+                  <li>
+                    <a href="dashboard.html" class="nav-link active">
+                      <i class="icon dashboard"></i>
+                      Dashboard
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link"
+                      ><i class="icon acc-management"></i> Account Management
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon effort-analysis"></i>
+                      Effort Analysis
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon market-tracker"></i>
+                      Market Tracker
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon market-share-analysis"></i>
+                      Market Share Analysis
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon sales-coverage"></i>
+                      Sales Coverage
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon my-performance"></i>
+                      My Performance
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon my-incentives"></i>
+                      My Incentives
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon contacts"></i>
+                      Contacts
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon revenue-analysis"></i>
+                      Revenue Analysis
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon team-management"></i>
+                      Team Management
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon target-achieved"></i>
+                      Target vs Achieved
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Delivery
+              </button>
+            </h3>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <ul>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon yearly-reports"></i>
+                      Yearly Reports
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon monthly-reports"></i>
+                      Monthly Reports
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon sales-reports"></i>
+                      Sales Reports
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon tickets"></i>
+                      Tickets
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon order"></i>
+                      Order
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon order-booking"></i>
+                      Order Booking
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon users"></i>
+                      Users
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon discount-approvals"></i>
+                      Discount Approvals
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon competitor-ads"></i>
+                      Competitor Ads
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon print-data"></i>
+                      Print Data
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon inventory"></i>
+                      Inventory
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon discount"></i>
+                      Discount
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="theme-switcher">
+          <span>Change Theme</span>
+          <label class="switch">
+            <input
+              class="switch__input"
+              type="checkbox"
+              role="switch"
+              id="theme-switcher"
+            />
+            <svg
+              class="switch__icon switch__icon--light"
+              viewBox="0 0 12 12"
+              width="12px"
+              height="12px"
+              aria-hidden="true"
+            >
+              <g
+                fill="none"
+                stroke="#fff"
+                stroke-width="1"
+                stroke-linecap="round"
+              >
+                <circle cx="6" cy="6" r="2" />
+                <g stroke-dasharray="1.5 1.5">
+                  <polyline points="6 10,6 11.5" transform="rotate(0,6,6)" />
+                  <polyline points="6 10,6 11.5" transform="rotate(45,6,6)" />
+                  <polyline points="6 10,6 11.5" transform="rotate(90,6,6)" />
+                  <polyline points="6 10,6 11.5" transform="rotate(135,6,6)" />
+                  <polyline points="6 10,6 11.5" transform="rotate(180,6,6)" />
+                  <polyline points="6 10,6 11.5" transform="rotate(225,6,6)" />
+                  <polyline points="6 10,6 11.5" transform="rotate(270,6,6)" />
+                  <polyline points="6 10,6 11.5" transform="rotate(315,6,6)" />
+                </g>
+              </g>
+            </svg>
+            <svg
+              class="switch__icon switch__icon--dark"
+              viewBox="0 0 12 12"
+              width="12px"
+              height="12px"
+              aria-hidden="true"
+            >
+              <g
+                fill="none"
+                stroke="#fff"
+                stroke-width="1"
+                stroke-linejoin="round"
+                transform="rotate(-45,6,6)"
+              >
+                <path
+                  d="m9,10c-2.209,0-4-1.791-4-4s1.791-4,4-4c.304,0,.598.041.883.105-.995-.992-2.367-1.605-3.883-1.605C2.962.5.5,2.962.5,6s2.462,5.5,5.5,5.5c1.516,0,2.888-.613,3.883-1.605-.285.064-.578.105-.883.105Z"
+                />
+              </g>
+            </svg>
+            <span class="switch__sr">Dark Mode</span>
+          </label>
+        </div>
+      </aside>
+      <!-- MAIN CONTENT AREA -->
+      <main class="main-content">
+        <!-- 3. STATS ROW WITH REMINDERS (COLLAPSIBLE) -->
+        <section class="collapsible-stats-section">
+          <div class="collapsible-content" id="collapsible-content">
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">Achieved Accounts</span>
+                  <span class="stat-card-change positive"
+                    >+89 <i class="arrow"></i
+                  ></span>
+                </div>
+                <div class="stat-card-comparison">
+                  <div class="thismonth">
+                    <span>This Month</span>
+                    <div class="value">2317</div>
+                  </div>
+                  <div class="lastmonth">
+                    <span>Last Month</span>
+                    <div class="value">2228</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="devider"></div>
+
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">Market Share</span>
+                  <span class="stat-card-change positive"
+                    >+1.19% <i class="arrow"></i
+                  ></span>
+                </div>
+                <div class="stat-card-comparison">
+                  <div class="thismonth">
+                    <span>This Month</span>
+                    <div class="value">52.35%</div>
+                  </div>
+                  <div class="lastmonth">
+                    <span>Last Month</span>
+                    <div class="value">51.54%</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="devider"></div>
+
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">Sales</span>
+                  <span class="stat-card-change negative"
+                    >-2.06cr <i class="arrow"></i
+                  ></span>
+                </div>
+                <div class="stat-card-comparison">
+                  <div class="thismonth">
+                    <span>This Month</span>
+                    <div class="value">2.84cr</div>
+                  </div>
+                  <div class="lastmonth">
+                    <span>Last Month</span>
+                    <div class="value">4.90cr</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="devider"></div>
+
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">Target</span>
+                  <span class="stat-card-change negative"
+                    >-14.81% <i class="arrow"></i
+                  ></span>
+                </div>
+                <div class="stat-card-comparison">
+                  <div class="thismonth">
+                    <span>This Month</span>
+                    <div class="value">29.58%</div>
+                  </div>
+                  <div class="lastmonth">
+                    <span>Last Month</span>
+                    <div class="value">44.39%</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="devider"></div>
+
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">Hard Avg Int/day</span>
+                  <span class="stat-card-change positive"
+                    >+1.88% <i class="arrow"></i
+                  ></span>
+                </div>
+                <div class="stat-card-comparison">
+                  <div class="thismonth">
+                    <span>This Month</span>
+                    <div class="value">79.7%</div>
+                  </div>
+                  <div class="lastmonth">
+                    <span>Last Month</span>
+                    <div class="value">77.82%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">Coverage</span>
+                  <span class="stat-card-change negative"
+                    >-16.57% <i class="arrow"></i
+                  ></span>
+                </div>
+                <div class="stat-card-comparison">
+                  <div class="thismonth">
+                    <span>This Month</span>
+                    <div class="value">45.19%</div>
+                  </div>
+                  <div class="lastmonth">
+                    <span>Last Month</span>
+                    <div class="value">61.76%</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="devider"></div>
+
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">Campaigns</span>
+                  <span class="stat-card-change negative"
+                    >-557 <i class="arrow"></i
+                  ></span>
+                </div>
+                <div class="stat-card-comparison">
+                  <div class="thismonth">
+                    <span>This Month</span>
+                    <div class="value">690</div>
+                  </div>
+                  <div class="lastmonth">
+                    <span>Last Month</span>
+                    <div class="value">1247</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="devider"></div>
+
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">Known</span>
+                  <span class="stat-card-change negative"
+                    >-180 <i class="arrow"></i
+                  ></span>
+                </div>
+                <div class="stat-card-comparison">
+                  <div class="thismonth">
+                    <span>This Month</span>
+                    <div class="value">244</div>
+                  </div>
+                  <div class="lastmonth">
+                    <span>Last Month</span>
+                    <div class="value">424</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="devider"></div>
+
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">Un-known</span>
+                  <span class="stat-card-change negative"
+                    >-373 <i class="arrow"></i
+                  ></span>
+                </div>
+                <div class="stat-card-comparison">
+                  <div class="thismonth">
+                    <span>This Month</span>
+                    <div class="value">446</div>
+                  </div>
+                  <div class="lastmonth">
+                    <span>Last Month</span>
+                    <div class="value">823</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="devider"></div>
+
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">AOV</span>
+                  <span class="stat-card-change positive"
+                    >+29.19L <i class="arrow"></i
+                  ></span>
+                </div>
+                <div class="stat-card-comparison">
+                  <div class="thismonth">
+                    <span>This Month</span>
+                    <div class="value">67.18L</div>
+                  </div>
+                  <div class="lastmonth">
+                    <span>Last Month</span>
+                    <div class="value">37.99L</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="devider"></div>
+
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">Frequency</span>
+                  <span class="stat-card-change positive"
+                    >+0.6 <i class="arrow"></i
+                  ></span>
+                </div>
+                <div class="stat-card-comparison">
+                  <div class="thismonth">
+                    <span>This Month</span>
+                    <div class="value">1.92</div>
+                  </div>
+                  <div class="lastmonth">
+                    <span>Last Month</span>
+                    <div class="value">1.86</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="reminders">
+              <div class="remindHeader">
+                <h2>
+                  <img src="/assets/images/reminders-bell.svg" alt="" />
+                  Reminders
+                </h2>
+                <ul class="how-many">
+                  <li><img src="/assets/images/rem1.png" alt="" /></li>
+                  <li><img src="/assets/images/rem2.png" alt="" /></li>
+                  <li><img src="/assets/images/rem3.png" alt="" /></li>
+                  <li><img src="/assets/images/rem4.png" alt="" /></li>
+                  <li><img src="/assets/images/rem5.png" alt="" /></li>
+                  <li><img src="/assets/images/rem6.png" alt="" /></li>
+                </ul>
+                <label for="" class="more-reminders">+12</label>
+                <a href="" class="show-all">Show all messages</a>
+                <div class="prev-next">
+                  <button class="previous">
+                    <img src="/assets/images/next-arrow.svg" alt="" />
+                  </button>
+                  <span>Prev/Next</span>
+                  <button class="next">
+                    <img src="/assets/images/next-arrow.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+              <div class="reminder-details">
+                <div class="reminder-content">
+                  <i class="thumbnail"
+                    ><img src="/assets/images/mansion-house.png" alt=""
+                  /></i>
+                  <h3>Mansions Home Constructions & Realty</h3>
+                  <p>
+                    Today you have a face to face meeting with
+                    <strong>Mr. Parag Shinde</strong> and needs to finalize the
+                    deal today itself.
+                  </p>
+                </div>
+                <div class="reminder-actions">
+                  <button title="Call" class="reschedule">
+                    <img src="/assets/images/re-schedule.svg" alt="" />
+                  </button>
+                  <button title="Location" class="message">
+                    <img src="/assets/images/message.svg" alt="" />
+                  </button>
+                  <button title="Info" class="video-call">
+                    <img src="/assets/images/video-call.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collapse-toggle" id="collapse-toggle">
+            <div class="arrow-container">
+              <div class="chevron"></div>
+              <div class="chevron"></div>
+              <div class="chevron"></div>
+            </div>
+          </div>
+        </section>
+        <!-- 4. DATA TABLE WITH PREVIEW -->
+        <section class="data-table">
+            <!-- Data Table Controls & Filters Start -->
+            <div class="data-controls">
+              <!-- Tabs Start -->
+              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="pills-home-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-home"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-home"
+                    aria-selected="true"
+                  >
+                    All Brands
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="pills-profile-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-profile"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-profile"
+                    aria-selected="false"
+                  >
+                    Day Wise Stats
+                  </button>
+                </li>
+              </ul>
+              <!-- Tabs End -->
+
+              <!-- Filters Start -->
+              <div class="filters">
+                <div class="input-group">
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>Search a brand or select one</option>
+                    <option value="">One</option>
+                    <option value="">Two</option>
+                    <option value="">Three</option>
+                  </select>
+                </div>
+                <div class="input-group">
+                  <i class="icon calendar"></i>
+                  <input type="text" class="datepicker" value="05-02-2025" />
+                  <span class="verses">TO</span>
+                  <input type="text" class="datepicker" value="15-04-2025" />
+                  <div class="dropdown">
+                    <button
+                      class="btn dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="true"
+                    >
+                      Custom Range
+                    </button>
+                    <ul
+                      class="dropdown-menu"
+                      data-popper-placement="bottom-start"
+                    >
+                      <li>
+                        <a href="#" class="dropdown-item">Custom Range</a>
+                      </li>
+                      <li><a href="#" class="dropdown-item">Last Week</a></li>
+                      <li><a href="#" class="dropdown-item">Last Month</a></li>
+                      <li>
+                        <a href="#" class="dropdown-item">Last 10 Days</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown-item">Financial Year</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Filters End -->
+            </div>
+            <!-- Data Table Controls & Filters End -->
+
+            <!-- Data Table Start -->
+            <div class="tab-content" id="pills-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="pills-home"
+                role="tabpanel"
+                aria-labelledby="pills-home-tab"
+                tabindex="0"
+              >
+                <div class="table-container">
+                  <table class="rwd-table table dashboard-brands">
+                    <thead>
+                      <tr>
+                        <th>Client</th>
+                        <th>Spent</th>
+                        <th>Platform</th>
+                        <th>Way2News</th>
+                        <th>Known</th>
+                        <th>Un-Known</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-th="Client" class="splWidth">
+                          <div class="brand">
+                            <i class="brand-logo"
+                              ><img src="/assets/images/brand1.png" alt=""
+                            /></i>
+                            <h3>TVS Motors</h3>
+                          </div>
+                        </td>
+                        <td data-th="Spent">
+                          <h5 class="spent">₹ 108.02 L</h5>
+                        </div>
+                        <td data-th="Platform">
+                          <div class="platforms">
+                            <img
+                              src="/assets/images/toi.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                            <img
+                              src="/assets/images/eenadu.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                            <img
+                              src="/assets/images/dinathanthi.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                          </div>
+                        </td>
+                        <td data-th="Way2News">
+                          <div class="yesNo no">No</div>
+                        </td>
+                        <td data-th="Known">0</td>
+                        <td data-th="Un-known">6</td>                        
+                      </tr>
+
+                      <tr>
+                        <td data-th="Client">
+                          <div class="brand">
+                            <i class="brand-logo"
+                              ><img src="/assets/images/brand2.png" alt=""
+                            /></i>
+                            <h3>Bhima KTK</h3>
+                          </div>
+                        </td>
+                        <td data-th="Spent">
+                          <h5 class="spent w2n-present">₹ 1.06 L</h5>
+                        </div>
+                        <td data-th="Platform">
+                          <div class="platforms">
+                            <img
+                              src="/assets/images/w2n-thumb.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                          </div>
+                        </td>
+                        <td data-th="Way2News">
+                          <div class="yesNo yes">Yes</div>
+                        </td>
+                        <td data-th="Known">0</td>
+                        <td data-th="Un-known">0</td>
+                      </tr>
+
+                      <tr>
+                        <td data-th="Client">
+                          <div class="brand">
+                            <i class="brand-logo"
+                              ><img src="/assets/images/brand3.png" alt=""
+                            /></i>
+                            <h3>Ather Motors</h3>
+                          </div>
+                        </td>
+                        <td data-th="Spent">
+                          <h5 class="spent">₹ 7.00 L</h5>
+                        </div>
+                        <td data-th="Platform">
+                          <div class="platforms">
+                            <img
+                              src="/assets/images/toi.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                          </div>
+                        </td>
+                        <td data-th="Way2News">
+                          <div class="yesNo no">No</div>
+                        </td>
+                        <td data-th="Known">0</td>
+                        <td data-th="Un-known">1</td>
+                      </tr>
+
+                      <tr>
+                        <td data-th="Client">
+                          <div class="brand">
+                            <i class="brand-logo"
+                              ><img src="/assets/images/brand4.png" alt=""
+                            /></i>
+                            <h3>Canara Bank</h3>
+                          </div>
+                        </td>
+                        <td data-th="Spent">
+                          <h5 class="spent">₹ 2.24 L</h5>
+                        </div>
+                        <td data-th="Platform">
+                          <div class="platforms">
+                            <img
+                              src="/assets/images/eenadu.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                            <img
+                              src="/assets/images/dinathanthi.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                          </div>
+                        </td>
+                        <td data-th="Way2News">
+                          <div class="yesNo no">No</div>
+                        </td>
+                        <td data-th="Known">0</td>
+                        <td data-th="Un-known">1</td>
+                      </tr>
+
+                      <tr>
+                        <td data-th="Client">
+                          <div class="brand">
+                            <i class="brand-logo"
+                              ><img src="/assets/images/brand5.png" alt=""
+                            /></i>
+                            <h3>Amazon</h3>
+                          </div>
+                        </td>
+                        <td data-th="Spent">
+                          <h5 class="spent w2n-present">₹ 10.28 L</h5>
+                        </div>
+                        <td data-th="Platform">
+                          <div class="platforms">
+                            <img
+                              src="/assets/images/w2n-thumb.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                          </div>
+                        </td>
+                        <td data-th="Way2News">
+                          <div class="yesNo yes">Yes</div>
+                        </td>
+                        <td data-th="Known">0</td>
+                        <td data-th="Un-known">0</td>
+                      </tr>
+
+                      <tr>
+                        <td data-th="Client">
+                          <div class="brand">
+                            <i class="brand-logo"
+                              ><img src="/assets/images/brand6.png" alt=""
+                            /></i>
+                            <h3>Flipkart</h3>
+                          </div>
+                        </td>
+                        <td data-th="Spent">
+                          <h5 class="spent w2n-present">₹ 3.05 L</h5>
+                        </div>
+                        <td data-th="Platform">
+                          <div class="platforms">
+                            <img
+                              src="/assets/images/w2n-thumb.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                          </div>
+                        </td>
+                        <td data-th="Way2News">
+                          <div class="yesNo yes">Yes</div>
+                        </td>
+                        <td data-th="Known">0</td>
+                        <td data-th="Un-known">0</td>
+                      </tr>
+
+                      <tr>
+                        <td data-th="Client">
+                          <div class="brand">
+                            <i class="brand-logo"
+                              ><img src="/assets/images/brand7.png" alt=""
+                            /></i>
+                            <h3>Xiaomi/Poco</h3>
+                          </div>
+                        </td>
+                        <td data-th="Spent">
+                          <h5 class="spent">₹ 2.99 L</h5>
+                        </div>
+                        <td data-th="Platform">
+                          <div class="platforms">
+                            <img
+                              src="/assets/images/eenadu.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                          </div>
+                        </td>
+                        <td data-th="Way2News">
+                          <div class="yesNo no">No</div>
+                        </td>
+                        <td data-th="Known">0</td>
+                        <td data-th="Un-known">2</td>
+                      </tr>
+
+                      <tr>
+                        <td data-th="Client">
+                          <div class="brand">
+                            <i class="brand-logo"
+                              ><img src="/assets/images/brand8.png" alt=""
+                            /></i>
+                            <h3>Ikea</h3>
+                          </div>
+                        </td>
+                        <td data-th="Spent">
+                          <h5 class="spent">₹ 7.01 L</h5>
+                        </div>
+                        <td data-th="Platform">
+                          <div class="platforms">
+                            <img
+                              src="/assets/images/eenadu.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                            <img
+                              src="/assets/images/dinathanthi.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                          </div>
+                        </td>
+                        <td data-th="Way2News">
+                          <div class="yesNo no">No</div>
+                        </td>
+                        <td data-th="Known">0</td>
+                        <td data-th="Un-known">1</td>
+                      </tr>
+
+                      <tr>
+                        <td data-th="Client">
+                          <div class="brand">
+                            <i class="brand-logo"
+                              ><img src="/assets/images/brand9.png" alt=""
+                            /></i>
+                            <h3>Titian</h3>
+                          </div>
+                        </td>
+                        <td data-th="Spent">
+                          <h5 class="spent">₹ 30.00 L</h5>
+                        </div>
+                        <td data-th="Platform">
+                          <div class="platforms">
+                            <img
+                              src="/assets/images/toi.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                            <img
+                              src="/assets/images/eenadu.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                            <img
+                              src="/assets/images/dinathanthi.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                          </div>
+                        </td>
+                        <td data-th="Way2News">
+                          <div class="yesNo no">No</div>
+                        </td>
+                        <td data-th="Known">0</td>
+                        <td data-th="Un-known">4</td>
+                      </tr>
+                      
+                      <tr>
+                        <td data-th="Client" class="splWidth">
+                          <div class="brand">
+                            <i class="brand-logo"
+                              ><img src="/assets/images/brand1.png" alt=""
+                            /></i>
+                            <h3>TVS Motors</h3>
+                          </div>
+                        </td>
+                        <td data-th="Spent">
+                          <h5 class="spent">₹ 108.02 L</h5>
+                        </div>
+                        <td data-th="Platform">
+                          <div class="platforms">
+                            <img
+                              src="/assets/images/toi.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                            <img
+                              src="/assets/images/eenadu.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                            <img
+                              src="/assets/images/dinathanthi.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                          </div>
+                        </td>
+                        <td data-th="Way2News">
+                          <div class="yesNo no">No</div>
+                        </td>
+                        <td data-th="Known">0</td>
+                        <td data-th="Un-known">6</td>                        
+                      </tr>
+
+                      <tr>
+                        <td data-th="Client">
+                          <div class="brand">
+                            <i class="brand-logo"
+                              ><img src="/assets/images/brand2.png" alt=""
+                            /></i>
+                            <h3>Bhima KTK</h3>
+                          </div>
+                        </td>
+                        <td data-th="Spent">
+                          <h5 class="spent w2n-present">₹ 1.06 L</h5>
+                        </div>
+                        <td data-th="Platform">
+                          <div class="platforms">
+                            <img
+                              src="/assets/images/w2n-thumb.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                          </div>
+                        </td>
+                        <td data-th="Way2News">
+                          <div class="yesNo yes">Yes</div>
+                        </td>
+                        <td data-th="Known">0</td>
+                        <td data-th="Un-known">0</td>
+                      </tr>
+
+                      <tr>
+                        <td data-th="Client">
+                          <div class="brand">
+                            <i class="brand-logo"
+                              ><img src="/assets/images/brand3.png" alt=""
+                            /></i>
+                            <h3>Ather Motors</h3>
+                          </div>
+                        </td>
+                        <td data-th="Spent">
+                          <h5 class="spent">₹ 7.00 L</h5>
+                        </div>
+                        <td data-th="Platform">
+                          <div class="platforms">
+                            <img
+                              src="/assets/images/toi.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                          </div>
+                        </td>
+                        <td data-th="Way2News">
+                          <div class="yesNo no">No</div>
+                        </td>
+                        <td data-th="Known">0</td>
+                        <td data-th="Un-known">1</td>
+                      </tr>
+
+                      <tr>
+                        <td data-th="Client">
+                          <div class="brand">
+                            <i class="brand-logo"
+                              ><img src="/assets/images/brand4.png" alt=""
+                            /></i>
+                            <h3>Canara Bank</h3>
+                          </div>
+                        </td>
+                        <td data-th="Spent">
+                          <h5 class="spent">₹ 2.24 L</h5>
+                        </div>
+                        <td data-th="Platform">
+                          <div class="platforms">
+                            <img
+                              src="/assets/images/eenadu.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                            <img
+                              src="/assets/images/dinathanthi.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                          </div>
+                        </td>
+                        <td data-th="Way2News">
+                          <div class="yesNo no">No</div>
+                        </td>
+                        <td data-th="Known">0</td>
+                        <td data-th="Un-known">1</td>
+                      </tr>
+
+                      <tr>
+                        <td data-th="Client">
+                          <div class="brand">
+                            <i class="brand-logo"
+                              ><img src="/assets/images/brand5.png" alt=""
+                            /></i>
+                            <h3>Amazon</h3>
+                          </div>
+                        </td>
+                        <td data-th="Spent">
+                          <h5 class="spent w2n-present">₹ 10.28 L</h5>
+                        </div>
+                        <td data-th="Platform">
+                          <div class="platforms">
+                            <img
+                              src="/assets/images/w2n-thumb.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                          </div>
+                        </td>
+                        <td data-th="Way2News">
+                          <div class="yesNo yes">Yes</div>
+                        </td>
+                        <td data-th="Known">0</td>
+                        <td data-th="Un-known">0</td>
+                      </tr>
+
+                      <tr>
+                        <td data-th="Client">
+                          <div class="brand">
+                            <i class="brand-logo"
+                              ><img src="/assets/images/brand6.png" alt=""
+                            /></i>
+                            <h3>Flipkart</h3>
+                          </div>
+                        </td>
+                        <td data-th="Spent">
+                          <h5 class="spent w2n-present">₹ 3.05 L</h5>
+                        </div>
+                        <td data-th="Platform">
+                          <div class="platforms">
+                            <img
+                              src="/assets/images/w2n-thumb.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                          </div>
+                        </td>
+                        <td data-th="Way2News">
+                          <div class="yesNo yes">Yes</div>
+                        </td>
+                        <td data-th="Known">0</td>
+                        <td data-th="Un-known">0</td>
+                      </tr>
+
+                      <tr>
+                        <td data-th="Client">
+                          <div class="brand">
+                            <i class="brand-logo"
+                              ><img src="/assets/images/brand7.png" alt=""
+                            /></i>
+                            <h3>Xiaomi/Poco</h3>
+                          </div>
+                        </td>
+                        <td data-th="Spent">
+                          <h5 class="spent">₹ 2.99 L</h5>
+                        </div>
+                        <td data-th="Platform">
+                          <div class="platforms">
+                            <img
+                              src="/assets/images/eenadu.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                          </div>
+                        </td>
+                        <td data-th="Way2News">
+                          <div class="yesNo no">No</div>
+                        </td>
+                        <td data-th="Known">0</td>
+                        <td data-th="Un-known">2</td>
+                      </tr>
+
+                      <tr>
+                        <td data-th="Client">
+                          <div class="brand">
+                            <i class="brand-logo"
+                              ><img src="/assets/images/brand8.png" alt=""
+                            /></i>
+                            <h3>Ikea</h3>
+                          </div>
+                        </td>
+                        <td data-th="Spent">
+                          <h5 class="spent">₹ 7.01 L</h5>
+                        </div>
+                        <td data-th="Platform">
+                          <div class="platforms">
+                            <img
+                              src="/assets/images/eenadu.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                            <img
+                              src="/assets/images/dinathanthi.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                          </div>
+                        </td>
+                        <td data-th="Way2News">
+                          <div class="yesNo no">No</div>
+                        </td>
+                        <td data-th="Known">0</td>
+                        <td data-th="Un-known">1</td>
+                      </tr>
+
+                      <tr>
+                        <td data-th="Client">
+                          <div class="brand">
+                            <i class="brand-logo"
+                              ><img src="/assets/images/brand9.png" alt=""
+                            /></i>
+                            <h3>Titian</h3>
+                          </div>
+                        </td>
+                        <td data-th="Spent">
+                          <h5 class="spent">₹ 30.00 L</h5>
+                        </div>
+                        <td data-th="Platform">
+                          <div class="platforms">
+                            <img
+                              src="/assets/images/toi.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                            <img
+                              src="/assets/images/eenadu.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                            <img
+                              src="/assets/images/dinathanthi.png"
+                              alt=""
+                              class="platform-icon"
+                            />
+                          </div>
+                        </td>
+                        <td data-th="Way2News">
+                          <div class="yesNo no">No</div>
+                        </td>
+                        <td data-th="Known">0</td>
+                        <td data-th="Un-known">4</td>
+                      </tr>
+                    </tbody>
+                  </table> <!-- Table End -->
+
+                  <!-- Ads Preview Pane -->
+                  <div class="previewPane">
+                    <div class="preview-cards">
+                      <div class="adDetailCard">
+                        <div class="theme">
+                          <img src="/assets/images/dummy.jpg" alt="" />
+                        </div>
+                        <div class="ad-details">
+                          <button class="showPreview">
+                            <i class="fa-solid fa-eye"></i> <span>Preview Ad</span>
+                          </button>
+                          <div class="editions">
+                            <span class="eenadu">Eenadu</span>
+                            <span class="sakshi">Sakshi</span>
+                          </div>
+                          <div class="date-page">
+                            <span><i class="fa-regular fa-file-lines"></i> Page: 14</span>
+                            <span><i class="fa-solid fa-calendar-days"></i> Apr 17 2025</span>
+                          </div>
+                          <h4>Canara Bank  |  Jeevan Dhara</h4>
+                          <p>Women empower special SB Account for pensioners</p>
+                          <span class="info"><i class="fa-solid fa-location-dot"></i> AP + TG + HCR Main Edition</span>
+                          <span class="info"><i class="fa-regular fa-file-image"></i> Ad Format:  <b>Half Page Ad</b></span>
+                          <div class="estimPrice">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            <h2>2.24 L <span>Estimated Value</span></h2>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="adDetailCard">
+                        <div class="theme">
+                          <img src="/assets/images/dummy.jpg" alt="" />
+                        </div>
+                        <div class="ad-details">
+                          <button class="showPreview">
+                            <i class="fa-solid fa-eye"></i> <span>Preview Ad</span>
+                          </button>
+                          <div class="editions">
+                            <span class="eenadu">Eenadu</span>
+                            <span class="sakshi">Sakshi</span>
+                          </div>
+                          <div class="date-page">
+                            <span><i class="fa-regular fa-file-lines"></i> Page: 14</span>
+                            <span><i class="fa-solid fa-calendar-days"></i> Apr 17 2025</span>
+                          </div>
+                          <h4>Canara Bank  |  Jeevan Dhara</h4>
+                          <p>Women empower special SB Account for pensioners</p>
+                          <span class="info"><i class="fa-solid fa-location-dot"></i> AP + TG + HCR Main Edition</span>
+                          <span class="info"><i class="fa-regular fa-file-image"></i> Ad Format:  <b>Half Page Ad</b></span>
+                          <div class="estimPrice">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            <h2>2.24 L <span>Estimated Value</span></h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Alphabetical Order Start -->
+                  <div class="alpOrder">
+                    <ul>
+                      <li>A</li>
+                      <li>B</li>
+                      <li class="active">C</li>
+                      <li>D</li>
+                      <li>E</li>
+                      <li>F</li>
+                      <li>G</li>
+                      <li>H</li>
+                      <li>I</li>
+                      <li>J</li>
+                      <li>K</li>
+                      <li>L</li>
+                      <li>M</li>
+                      <li>N</li>
+                      <li>O</li>
+                      <li>P</li>
+                      <li>Q</li>
+                      <li>R</li>
+                      <li>S</li>
+                      <li>T</li>
+                      <li>U</li>
+                      <li>V</li>
+                      <li>W</li>
+                      <li>X</li>
+                      <li>Y</li>
+                      <li>Z</li>
+                    </ul>
+                  </div><!-- Alphabetical Order End -->
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-profile"
+                role="tabpanel"
+                aria-labelledby="pills-profile-tab"
+                tabindex="0"
+              >
+                <h1>Content will be updated soon...!</h1>
+              </div>
+            </div>            
+        </section> <!-- Data Table End -->
+      </main>
+    </div>
+
+    <!-- Go To Top Arrow with Progressive scroll Button Start -->
+    <div class="progress-wrap">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+    <!-- Go To Top Arrow with Progressive scroll Button End -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"
+    ></script>
+    <script src="/assets/js/all-scripts.js"></script>
+  </body>
+</html>
