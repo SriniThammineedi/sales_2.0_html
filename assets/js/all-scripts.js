@@ -160,12 +160,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Dropdown Menu ---
 // Select DropDown Item onClick
-    var aos = '';
-    $('.dropdown-item').click(function (event) {
-        event.preventDefault();
-        aos = $(this).text();
-        $('.dropdown-toggle').text(aos);
-    })
+    $(".dropdown-item").click(function (event) {
+      event.preventDefault();
+      const selectedText = $(this).text();
+
+      $(this).closest(".dropdown").find(".dropdown-toggle").text(selectedText);
+    });
 
 // Scroll-to-Top Button with Progress Indicator
     $(document).ready(function(){"use strict";
