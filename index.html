@@ -797,726 +797,1004 @@
                 aria-labelledby="pills-home-tab"
                 tabindex="0"
               >
-                <div class="table-container">
-                  <table class="rwd-table table dashboard-brands">
-                    <thead>
-                      <tr>
-                        <th>Client</th>
-                        <th>Spent</th>
-                        <th>Platform</th>
-                        <th>Way2News</th>
-                        <th>Known</th>
-                        <th>Un-Known</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td data-th="Client" class="splWidth">
-                          <div class="brand">
-                            <i class="brand-logo"
-                              ><img src="./assets/images/brand1.png" alt=""
-                            /></i>
-                            <h3>TVS Motors</h3>
-                          </div>
-                        </td>
-                        <td data-th="Spent">
-                          <h5 class="spent">₹ 108.02 L</h5>
-                        </td>
-                        <td data-th="Platform">
-                          <div class="platforms">
-                            <img
-                              src="./assets/images/toi.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                            <img
-                              src="./assets/images/eenadu.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                            <img
-                              src="./assets/images/dinathanthi.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                          </div>
-                        </td>
-                        <td data-th="Way2News">
-                          <div class="yesNo no">No</div>
-                        </td>
-                        <td data-th="Known">0</td>
-                        <td data-th="Un-known">6</td>                        
-                      </tr>
+                <div class="table-container" id="tableContainer">
+                  <div id="dateNotifier">
+                    <span>01/04/2025</span> <em>to</em> <span>25/04/2025</span>
+                  </div>
+                  <div class="as-row">
+                    <table class="rwd-table table dashboard-brands" id="dboardBrands">
+                      <thead>
+                        <tr>
+                          <th>Client</th>
+                          <th>Spent</th>
+                          <th>Platform</th>
+                          <th>Way2News</th>
+                          <th>Known</th>
+                          <th>Un-Known</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr data-client="TVS Motors">
+                          <td data-th="Client" class="splWidth">
+                            <div class="brand">
+                              <i class="brand-logo"
+                                ><img src="./assets/images/brand1.png" alt=""
+                              /></i>
+                              <h3>TVS Motors</h3>
+                            </div>
+                          </td>
+                          <td data-th="Spent">
+                            <h5 class="spent">₹ 108.02 L</h5>
+                          </td>
+                          <td data-th="Platform">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/toi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/eenadu.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/dinathanthi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                          </td>
+                          <td data-th="Way2News">
+                            <div class="yesNo no">No</div>
+                          </td>
+                          <td data-th="Known">0</td>
+                          <td data-th="Un-known">6</td>                        
+                        </tr>
 
-                      <tr>
-                        <td data-th="Client">
-                          <div class="brand">
-                            <i class="brand-logo"
-                              ><img src="./assets/images/brand2.png" alt=""
-                            /></i>
-                            <h3>Bhima KTK</h3>
-                          </div>
-                        </td>
-                        <td data-th="Spent">
-                          <h5 class="spent w2n-present">₹ 1.06 L</h5>
-                        </td>
-                        <td data-th="Platform">
-                          <div class="platforms">
-                            <img
-                              src="./assets/images/w2n-thumb.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                          </div>
-                        </td>
-                        <td data-th="Way2News">
-                          <div class="yesNo yes">Yes</div>
-                        </td>
-                        <td data-th="Known">0</td>
-                        <td data-th="Un-known">0</td>
-                      </tr>
+                        <tr data-client="Bhima KTK">
+                          <td data-th="Client">
+                            <div class="brand">
+                              <i class="brand-logo"
+                                ><img src="./assets/images/brand2.png" alt=""
+                              /></i>
+                              <h3>Bhima KTK</h3>
+                            </div>
+                          </td>
+                          <td data-th="Spent">
+                            <h5 class="spent w2n-present">₹ 1.06 L</h5>
+                          </td>
+                          <td data-th="Platform">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/w2n-thumb.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                          </td>
+                          <td data-th="Way2News">
+                            <div class="yesNo yes">Yes</div>
+                          </td>
+                          <td data-th="Known">0</td>
+                          <td data-th="Un-known">0</td>
+                        </tr>
 
-                      <tr>
-                        <td data-th="Client">
-                          <div class="brand">
-                            <i class="brand-logo"
-                              ><img src="./assets/images/brand3.png" alt=""
-                            /></i>
-                            <h3>Ather Motors</h3>
-                          </div>
-                        </td>
-                        <td data-th="Spent">
-                          <h5 class="spent">₹ 7.00 L</h5>
-                        </td>
-                        <td data-th="Platform">
-                          <div class="platforms">
-                            <img
-                              src="./assets/images/toi.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                          </div>
-                        </td>
-                        <td data-th="Way2News">
-                          <div class="yesNo no">No</div>
-                        </td>
-                        <td data-th="Known">0</td>
-                        <td data-th="Un-known">1</td>
-                      </tr>
+                        <tr data-client="Ather Motors">
+                          <td data-th="Client">
+                            <div class="brand">
+                              <i class="brand-logo"
+                                ><img src="./assets/images/brand3.png" alt=""
+                              /></i>
+                              <h3>Ather Motors</h3>
+                            </div>
+                          </td>
+                          <td data-th="Spent">
+                            <h5 class="spent">₹ 7.00 L</h5>
+                          </td>
+                          <td data-th="Platform">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/toi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                          </td>
+                          <td data-th="Way2News">
+                            <div class="yesNo no">No</div>
+                          </td>
+                          <td data-th="Known">0</td>
+                          <td data-th="Un-known">1</td>
+                        </tr>
 
-                      <tr>
-                        <td data-th="Client">
-                          <div class="brand">
-                            <i class="brand-logo"
-                              ><img src="./assets/images/brand4.png" alt=""
-                            /></i>
-                            <h3>Canara Bank</h3>
-                          </div>
-                        </td>
-                        <td data-th="Spent">
-                          <h5 class="spent">₹ 2.24 L</h5>
-                        </td>
-                        <td data-th="Platform">
-                          <div class="platforms">
-                            <img
-                              src="./assets/images/eenadu.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                            <img
-                              src="./assets/images/dinathanthi.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                          </div>
-                        </td>
-                        <td data-th="Way2News">
-                          <div class="yesNo no">No</div>
-                        </td>
-                        <td data-th="Known">0</td>
-                        <td data-th="Un-known">1</td>
-                      </tr>
+                        <tr data-client="Canara Bank">
+                          <td data-th="Client">
+                            <div class="brand">
+                              <i class="brand-logo"
+                                ><img src="./assets/images/brand4.png" alt=""
+                              /></i>
+                              <h3>Canara Bank</h3>
+                            </div>
+                          </td>
+                          <td data-th="Spent">
+                            <h5 class="spent">₹ 2.24 L</h5>
+                          </td>
+                          <td data-th="Platform">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/eenadu.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/dinathanthi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                          </td>
+                          <td data-th="Way2News">
+                            <div class="yesNo no">No</div>
+                          </td>
+                          <td data-th="Known">0</td>
+                          <td data-th="Un-known">1</td>
+                        </tr>
 
-                      <tr>
-                        <td data-th="Client">
-                          <div class="brand">
-                            <i class="brand-logo"
-                              ><img src="./assets/images/brand5.png" alt=""
-                            /></i>
-                            <h3>Amazon</h3>
-                          </div>
-                        </td>
-                        <td data-th="Spent">
-                          <h5 class="spent w2n-present">₹ 10.28 L</h5>
-                        </td>
-                        <td data-th="Platform">
-                          <div class="platforms">
-                            <img
-                              src="./assets/images/w2n-thumb.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                          </div>
-                        </td>
-                        <td data-th="Way2News">
-                          <div class="yesNo yes">Yes</div>
-                        </td>
-                        <td data-th="Known">0</td>
-                        <td data-th="Un-known">0</td>
-                      </tr>
+                        <tr data-client="Amazon">
+                          <td data-th="Client">
+                            <div class="brand">
+                              <i class="brand-logo"
+                                ><img src="./assets/images/brand5.png" alt=""
+                              /></i>
+                              <h3>Amazon</h3>
+                            </div>
+                          </td>
+                          <td data-th="Spent">
+                            <h5 class="spent w2n-present">₹ 10.28 L</h5>
+                          </td>
+                          <td data-th="Platform">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/w2n-thumb.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                          </td>
+                          <td data-th="Way2News">
+                            <div class="yesNo yes">Yes</div>
+                          </td>
+                          <td data-th="Known">0</td>
+                          <td data-th="Un-known">0</td>
+                        </tr>
 
-                      <tr>
-                        <td data-th="Client">
-                          <div class="brand">
-                            <i class="brand-logo"
-                              ><img src="./assets/images/brand6.png" alt=""
-                            /></i>
-                            <h3>Flipkart</h3>
-                          </div>
-                        </td>
-                        <td data-th="Spent">
-                          <h5 class="spent w2n-present">₹ 3.05 L</h5>
-                        </td>
-                        <td data-th="Platform">
-                          <div class="platforms">
-                            <img
-                              src="./assets/images/w2n-thumb.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                          </div>
-                        </td>
-                        <td data-th="Way2News">
-                          <div class="yesNo yes">Yes</div>
-                        </td>
-                        <td data-th="Known">0</td>
-                        <td data-th="Un-known">0</td>
-                      </tr>
+                        <tr>
+                          <td data-th="Client">
+                            <div class="brand">
+                              <i class="brand-logo"
+                                ><img src="./assets/images/brand6.png" alt=""
+                              /></i>
+                              <h3>Flipkart</h3>
+                            </div>
+                          </td>
+                          <td data-th="Spent">
+                            <h5 class="spent w2n-present">₹ 3.05 L</h5>
+                          </td>
+                          <td data-th="Platform">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/w2n-thumb.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                          </td>
+                          <td data-th="Way2News">
+                            <div class="yesNo yes">Yes</div>
+                          </td>
+                          <td data-th="Known">0</td>
+                          <td data-th="Un-known">0</td>
+                        </tr>
 
-                      <tr>
-                        <td data-th="Client">
-                          <div class="brand">
-                            <i class="brand-logo"
-                              ><img src="./assets/images/brand7.png" alt=""
-                            /></i>
-                            <h3>Xiaomi/Poco</h3>
-                          </div>
-                        </td>
-                        <td data-th="Spent">
-                          <h5 class="spent">₹ 2.99 L</h5>
-                        </td>
-                        <td data-th="Platform">
-                          <div class="platforms">
-                            <img
-                              src="./assets/images/eenadu.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                          </div>
-                        </td>
-                        <td data-th="Way2News">
-                          <div class="yesNo no">No</div>
-                        </td>
-                        <td data-th="Known">0</td>
-                        <td data-th="Un-known">2</td>
-                      </tr>
+                        <tr>
+                          <td data-th="Client">
+                            <div class="brand">
+                              <i class="brand-logo"
+                                ><img src="./assets/images/brand7.png" alt=""
+                              /></i>
+                              <h3>Xiaomi/Poco</h3>
+                            </div>
+                          </td>
+                          <td data-th="Spent">
+                            <h5 class="spent">₹ 2.99 L</h5>
+                          </td>
+                          <td data-th="Platform">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/eenadu.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                          </td>
+                          <td data-th="Way2News">
+                            <div class="yesNo no">No</div>
+                          </td>
+                          <td data-th="Known">0</td>
+                          <td data-th="Un-known">2</td>
+                        </tr>
 
-                      <tr>
-                        <td data-th="Client">
-                          <div class="brand">
-                            <i class="brand-logo"
-                              ><img src="./assets/images/brand8.png" alt=""
-                            /></i>
-                            <h3>Ikea</h3>
-                          </div>
-                        </td>
-                        <td data-th="Spent">
-                          <h5 class="spent">₹ 7.01 L</h5>
-                        </td>
-                        <td data-th="Platform">
-                          <div class="platforms">
-                            <img
-                              src="./assets/images/eenadu.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                            <img
-                              src="./assets/images/dinathanthi.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                          </div>
-                        </td>
-                        <td data-th="Way2News">
-                          <div class="yesNo no">No</div>
-                        </td>
-                        <td data-th="Known">0</td>
-                        <td data-th="Un-known">1</td>
-                      </tr>
+                        <tr>
+                          <td data-th="Client">
+                            <div class="brand">
+                              <i class="brand-logo"
+                                ><img src="./assets/images/brand8.png" alt=""
+                              /></i>
+                              <h3>Ikea</h3>
+                            </div>
+                          </td>
+                          <td data-th="Spent">
+                            <h5 class="spent">₹ 7.01 L</h5>
+                          </td>
+                          <td data-th="Platform">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/eenadu.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/dinathanthi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                          </td>
+                          <td data-th="Way2News">
+                            <div class="yesNo no">No</div>
+                          </td>
+                          <td data-th="Known">0</td>
+                          <td data-th="Un-known">1</td>
+                        </tr>
 
-                      <tr>
-                        <td data-th="Client">
-                          <div class="brand">
-                            <i class="brand-logo"
-                              ><img src="./assets/images/brand9.png" alt=""
-                            /></i>
-                            <h3>Titian</h3>
-                          </div>
-                        </td>
-                        <td data-th="Spent">
-                          <h5 class="spent">₹ 30.00 L</h5>
-                        </td>
-                        <td data-th="Platform">
-                          <div class="platforms">
-                            <img
-                              src="./assets/images/toi.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                            <img
-                              src="./assets/images/eenadu.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                            <img
-                              src="./assets/images/dinathanthi.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                          </div>
-                        </td>
-                        <td data-th="Way2News">
-                          <div class="yesNo no">No</div>
-                        </td>
-                        <td data-th="Known">0</td>
-                        <td data-th="Un-known">4</td>
-                      </tr>
-                      
-                      <tr>
-                        <td data-th="Client" class="splWidth">
-                          <div class="brand">
-                            <i class="brand-logo"
-                              ><img src="./assets/images/brand1.png" alt=""
-                            /></i>
-                            <h3>TVS Motors</h3>
-                          </div>
-                        </td>
-                        <td data-th="Spent">
-                          <h5 class="spent">₹ 108.02 L</h5>
-                        </td>
-                        <td data-th="Platform">
-                          <div class="platforms">
-                            <img
-                              src="./assets/images/toi.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                            <img
-                              src="./assets/images/eenadu.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                            <img
-                              src="./assets/images/dinathanthi.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                          </div>
-                        </td>
-                        <td data-th="Way2News">
-                          <div class="yesNo no">No</div>
-                        </td>
-                        <td data-th="Known">0</td>
-                        <td data-th="Un-known">6</td>                        
-                      </tr>
+                        <tr>
+                          <td data-th="Client">
+                            <div class="brand">
+                              <i class="brand-logo"
+                                ><img src="./assets/images/brand9.png" alt=""
+                              /></i>
+                              <h3>Titian</h3>
+                            </div>
+                          </td>
+                          <td data-th="Spent">
+                            <h5 class="spent">₹ 30.00 L</h5>
+                          </td>
+                          <td data-th="Platform">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/toi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/eenadu.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/dinathanthi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                          </td>
+                          <td data-th="Way2News">
+                            <div class="yesNo no">No</div>
+                          </td>
+                          <td data-th="Known">0</td>
+                          <td data-th="Un-known">4</td>
+                        </tr>
+                        
+                        <tr>
+                          <td data-th="Client" class="splWidth">
+                            <div class="brand">
+                              <i class="brand-logo"
+                                ><img src="./assets/images/brand1.png" alt=""
+                              /></i>
+                              <h3>TVS Motors</h3>
+                            </div>
+                          </td>
+                          <td data-th="Spent">
+                            <h5 class="spent">₹ 108.02 L</h5>
+                          </td>
+                          <td data-th="Platform">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/toi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/eenadu.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/dinathanthi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                          </td>
+                          <td data-th="Way2News">
+                            <div class="yesNo no">No</div>
+                          </td>
+                          <td data-th="Known">0</td>
+                          <td data-th="Un-known">6</td>                        
+                        </tr>
 
-                      <tr>
-                        <td data-th="Client">
-                          <div class="brand">
-                            <i class="brand-logo"
-                              ><img src="./assets/images/brand2.png" alt=""
-                            /></i>
-                            <h3>Bhima KTK</h3>
-                          </div>
-                        </td>
-                        <td data-th="Spent">
-                          <h5 class="spent w2n-present">₹ 1.06 L</h5>
-                        </td>
-                        <td data-th="Platform">
-                          <div class="platforms">
-                            <img
-                              src="./assets/images/w2n-thumb.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                          </div>
-                        </td>
-                        <td data-th="Way2News">
-                          <div class="yesNo yes">Yes</div>
-                        </td>
-                        <td data-th="Known">0</td>
-                        <td data-th="Un-known">0</td>
-                      </tr>
+                        <tr>
+                          <td data-th="Client">
+                            <div class="brand">
+                              <i class="brand-logo"
+                                ><img src="./assets/images/brand2.png" alt=""
+                              /></i>
+                              <h3>Bhima KTK</h3>
+                            </div>
+                          </td>
+                          <td data-th="Spent">
+                            <h5 class="spent w2n-present">₹ 1.06 L</h5>
+                          </td>
+                          <td data-th="Platform">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/w2n-thumb.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                          </td>
+                          <td data-th="Way2News">
+                            <div class="yesNo yes">Yes</div>
+                          </td>
+                          <td data-th="Known">0</td>
+                          <td data-th="Un-known">0</td>
+                        </tr>
 
-                      <tr>
-                        <td data-th="Client">
-                          <div class="brand">
-                            <i class="brand-logo"
-                              ><img src="./assets/images/brand3.png" alt=""
-                            /></i>
-                            <h3>Ather Motors</h3>
-                          </div>
-                        </td>
-                        <td data-th="Spent">
-                          <h5 class="spent">₹ 7.00 L</h5>
-                        </td>
-                        <td data-th="Platform">
-                          <div class="platforms">
-                            <img
-                              src="./assets/images/toi.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                          </div>
-                        </td>
-                        <td data-th="Way2News">
-                          <div class="yesNo no">No</div>
-                        </td>
-                        <td data-th="Known">0</td>
-                        <td data-th="Un-known">1</td>
-                      </tr>
+                        <tr>
+                          <td data-th="Client">
+                            <div class="brand">
+                              <i class="brand-logo"
+                                ><img src="./assets/images/brand3.png" alt=""
+                              /></i>
+                              <h3>Ather Motors</h3>
+                            </div>
+                          </td>
+                          <td data-th="Spent">
+                            <h5 class="spent">₹ 7.00 L</h5>
+                          </td>
+                          <td data-th="Platform">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/toi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                          </td>
+                          <td data-th="Way2News">
+                            <div class="yesNo no">No</div>
+                          </td>
+                          <td data-th="Known">0</td>
+                          <td data-th="Un-known">1</td>
+                        </tr>
 
-                      <tr>
-                        <td data-th="Client">
-                          <div class="brand">
-                            <i class="brand-logo"
-                              ><img src="./assets/images/brand4.png" alt=""
-                            /></i>
-                            <h3>Canara Bank</h3>
-                          </div>
-                        </td>
-                        <td data-th="Spent">
-                          <h5 class="spent">₹ 2.24 L</h5>
-                        </td>
-                        <td data-th="Platform">
-                          <div class="platforms">
-                            <img
-                              src="./assets/images/eenadu.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                            <img
-                              src="./assets/images/dinathanthi.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                          </div>
-                        </td>
-                        <td data-th="Way2News">
-                          <div class="yesNo no">No</div>
-                        </td>
-                        <td data-th="Known">0</td>
-                        <td data-th="Un-known">1</td>
-                      </tr>
+                        <tr>
+                          <td data-th="Client">
+                            <div class="brand">
+                              <i class="brand-logo"
+                                ><img src="./assets/images/brand4.png" alt=""
+                              /></i>
+                              <h3>Canara Bank</h3>
+                            </div>
+                          </td>
+                          <td data-th="Spent">
+                            <h5 class="spent">₹ 2.24 L</h5>
+                          </td>
+                          <td data-th="Platform">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/eenadu.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/dinathanthi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                          </td>
+                          <td data-th="Way2News">
+                            <div class="yesNo no">No</div>
+                          </td>
+                          <td data-th="Known">0</td>
+                          <td data-th="Un-known">1</td>
+                        </tr>
 
-                      <tr>
-                        <td data-th="Client">
-                          <div class="brand">
-                            <i class="brand-logo"
-                              ><img src="./assets/images/brand5.png" alt=""
-                            /></i>
-                            <h3>Amazon</h3>
-                          </div>
-                        </td>
-                        <td data-th="Spent">
-                          <h5 class="spent w2n-present">₹ 10.28 L</h5>
-                        <td data-th="Platform">
-                          <div class="platforms">
-                            <img
-                              src="./assets/images/w2n-thumb.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                          </div>
-                        </td>
-                        <td data-th="Way2News">
-                          <div class="yesNo yes">Yes</div>
-                        </td>
-                        <td data-th="Known">0</td>
-                        <td data-th="Un-known">0</td>
-                      </tr>
+                        <tr>
+                          <td data-th="Client">
+                            <div class="brand">
+                              <i class="brand-logo"
+                                ><img src="./assets/images/brand5.png" alt=""
+                              /></i>
+                              <h3>Amazon</h3>
+                            </div>
+                          </td>
+                          <td data-th="Spent">
+                            <h5 class="spent w2n-present">₹ 10.28 L</h5>
+                          <td data-th="Platform">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/w2n-thumb.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                          </td>
+                          <td data-th="Way2News">
+                            <div class="yesNo yes">Yes</div>
+                          </td>
+                          <td data-th="Known">0</td>
+                          <td data-th="Un-known">0</td>
+                        </tr>
 
-                      <tr>
-                        <td data-th="Client">
-                          <div class="brand">
-                            <i class="brand-logo"
-                              ><img src="./assets/images/brand6.png" alt=""
-                            /></i>
-                            <h3>Flipkart</h3>
-                          </div>
-                        </td>
-                        <td data-th="Spent">
-                          <h5 class="spent w2n-present">₹ 3.05 L</h5>
-                        <td data-th="Platform">
-                          <div class="platforms">
-                            <img
-                              src="./assets/images/w2n-thumb.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                          </div>
-                        </td>
-                        <td data-th="Way2News">
-                          <div class="yesNo yes">Yes</div>
-                        </td>
-                        <td data-th="Known">0</td>
-                        <td data-th="Un-known">0</td>
-                      </tr>
+                        <tr>
+                          <td data-th="Client">
+                            <div class="brand">
+                              <i class="brand-logo"
+                                ><img src="./assets/images/brand6.png" alt=""
+                              /></i>
+                              <h3>Flipkart</h3>
+                            </div>
+                          </td>
+                          <td data-th="Spent">
+                            <h5 class="spent w2n-present">₹ 3.05 L</h5>
+                          <td data-th="Platform">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/w2n-thumb.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                          </td>
+                          <td data-th="Way2News">
+                            <div class="yesNo yes">Yes</div>
+                          </td>
+                          <td data-th="Known">0</td>
+                          <td data-th="Un-known">0</td>
+                        </tr>
 
-                      <tr>
-                        <td data-th="Client">
-                          <div class="brand">
-                            <i class="brand-logo"
-                              ><img src="./assets/images/brand7.png" alt=""
-                            /></i>
-                            <h3>Xiaomi/Poco</h3>
-                          </div>
-                        </td>
-                        <td data-th="Spent">
-                          <h5 class="spent">₹ 2.99 L</h5>
-                        </td>
-                        <td data-th="Platform">
-                          <div class="platforms">
-                            <img
-                              src="./assets/images/eenadu.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                          </div>
-                        </td>
-                        <td data-th="Way2News">
-                          <div class="yesNo no">No</div>
-                        </td>
-                        <td data-th="Known">0</td>
-                        <td data-th="Un-known">2</td>
-                      </tr>
+                        <tr>
+                          <td data-th="Client">
+                            <div class="brand">
+                              <i class="brand-logo"
+                                ><img src="./assets/images/brand7.png" alt=""
+                              /></i>
+                              <h3>Xiaomi/Poco</h3>
+                            </div>
+                          </td>
+                          <td data-th="Spent">
+                            <h5 class="spent">₹ 2.99 L</h5>
+                          </td>
+                          <td data-th="Platform">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/eenadu.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                          </td>
+                          <td data-th="Way2News">
+                            <div class="yesNo no">No</div>
+                          </td>
+                          <td data-th="Known">0</td>
+                          <td data-th="Un-known">2</td>
+                        </tr>
 
-                      <tr>
-                        <td data-th="Client">
-                          <div class="brand">
-                            <i class="brand-logo"
-                              ><img src="./assets/images/brand8.png" alt=""
-                            /></i>
-                            <h3>Ikea</h3>
-                          </div>
-                        </td>
-                        <td data-th="Spent">
-                          <h5 class="spent">₹ 7.01 L</h5>
-                        </td>
-                        <td data-th="Platform">
-                          <div class="platforms">
-                            <img
-                              src="./assets/images/eenadu.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                            <img
-                              src="./assets/images/dinathanthi.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                          </div>
-                        </td>
-                        <td data-th="Way2News">
-                          <div class="yesNo no">No</div>
-                        </td>
-                        <td data-th="Known">0</td>
-                        <td data-th="Un-known">1</td>
-                      </tr>
+                        <tr>
+                          <td data-th="Client">
+                            <div class="brand">
+                              <i class="brand-logo"
+                                ><img src="./assets/images/brand8.png" alt=""
+                              /></i>
+                              <h3>Ikea</h3>
+                            </div>
+                          </td>
+                          <td data-th="Spent">
+                            <h5 class="spent">₹ 7.01 L</h5>
+                          </td>
+                          <td data-th="Platform">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/eenadu.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/dinathanthi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                          </td>
+                          <td data-th="Way2News">
+                            <div class="yesNo no">No</div>
+                          </td>
+                          <td data-th="Known">0</td>
+                          <td data-th="Un-known">1</td>
+                        </tr>
 
-                      <tr>
-                        <td data-th="Client">
-                          <div class="brand">
-                            <i class="brand-logo"
-                              ><img src="./assets/images/brand9.png" alt=""
-                            /></i>
-                            <h3>Titian</h3>
-                          </div>
-                        </td>
-                        <td data-th="Spent">
-                          <h5 class="spent">₹ 30.00 L</h5>
-                        </td>
-                        <td data-th="Platform">
-                          <div class="platforms">
-                            <img
-                              src="./assets/images/toi.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                            <img
-                              src="./assets/images/eenadu.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                            <img
-                              src="./assets/images/dinathanthi.png"
-                              alt=""
-                              class="platform-icon"
-                            />
-                          </div>
-                        </td>
-                        <td data-th="Way2News">
-                          <div class="yesNo no">No</div>
-                        </td>
-                        <td data-th="Known">0</td>
-                        <td data-th="Un-known">4</td>
-                      </tr>
-                    </tbody>
-                  </table> <!-- Table End -->
+                        <tr>
+                          <td data-th="Client">
+                            <div class="brand">
+                              <i class="brand-logo"
+                                ><img src="./assets/images/brand9.png" alt=""
+                              /></i>
+                              <h3>Titian</h3>
+                            </div>
+                          </td>
+                          <td data-th="Spent">
+                            <h5 class="spent">₹ 30.00 L</h5>
+                          </td>
+                          <td data-th="Platform">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/toi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/eenadu.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/dinathanthi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                          </td>
+                          <td data-th="Way2News">
+                            <div class="yesNo no">No</div>
+                          </td>
+                          <td data-th="Known">0</td>
+                          <td data-th="Un-known">4</td>
+                        </tr>
+                      </tbody>
+                    </table> <!-- Table End -->
 
-                  <!-- Ads Preview Pane -->
-                  <div class="previewPane">
-                    <div class="spacer"></div>
-                    <div class="paneTitle">Ads Preview</div>
-                    <div class="preview-cards">
-                      <div class="adDetailCard">
-                        <div class="theme">
-                          <img src="./assets/images/dummy.jpg" alt="" />
+                    <!-- Ads Preview Pane -->
+                    <div class="previewPane">
+                      <div class="spacer"></div>
+                      <div class="paneTitle">Ads Preview</div>
+                      <button class="closePreview"><img src="./assets/images/close-red.svg" alt=""></button>
+                      <div class="preview-cards" id="tvs-motors">
+                        <div class="adDetailCard">
+                          <div class="theme">
+                            <img src="./assets/images/tvs1.jpg" alt="" />
+                          </div>
+                          <div class="ad-details">
+                            <button class="showPreview">
+                              <i class="fa-solid fa-eye"></i> <span>Preview Ad</span>
+                            </button>
+                            <div class="editions">
+                              <span class="eenadu">Eenadu</span>
+                              <span class="sakshi">Sakshi</span>
+                            </div>
+                            <div class="date-page">
+                              <span><i class="fa-regular fa-file-lines"></i> Page: 14</span>
+                              <span><i class="fa-solid fa-calendar-days"></i> Apr 17 2025</span>
+                            </div>
+                            <h4>Canara Bank  |  Jeevan Dhara</h4>
+                            <p>Women empower special SB Account for pensioners</p>
+                            <span class="info"><i class="fa-solid fa-location-dot"></i> AP + TG + HCR Main Edition</span>
+                            <span class="info"><i class="fa-regular fa-file-image"></i> Ad Format:  <b>Half Page Ad</b></span>
+                            <div class="estimPrice">
+                              <i class="fa-solid fa-file-invoice-dollar"></i>
+                              <h2>2.24 L <span>Estimated Value</span></h2>
+                            </div>
+                          </div>
                         </div>
-                        <div class="ad-details">
-                          <button class="showPreview">
-                            <i class="fa-solid fa-eye"></i> <span>Preview Ad</span>
-                          </button>
-                          <div class="editions">
-                            <span class="eenadu">Eenadu</span>
-                            <span class="sakshi">Sakshi</span>
+                        <div class="adDetailCard">
+                          <div class="theme">
+                            <img src="./assets/images/tvs2.jpg" alt="" />
                           </div>
-                          <div class="date-page">
-                            <span><i class="fa-regular fa-file-lines"></i> Page: 14</span>
-                            <span><i class="fa-solid fa-calendar-days"></i> Apr 17 2025</span>
+                          <div class="ad-details">
+                            <button class="showPreview">
+                              <i class="fa-solid fa-eye"></i> <span>Preview Ad</span>
+                            </button>
+                            <div class="editions">
+                              <span class="eenadu">Eenadu</span>
+                              <span class="sakshi">Sakshi</span>
+                            </div>
+                            <div class="date-page">
+                              <span><i class="fa-regular fa-file-lines"></i> Page: 14</span>
+                              <span><i class="fa-solid fa-calendar-days"></i> Apr 17 2025</span>
+                            </div>
+                            <h4>Canara Bank  |  Jeevan Dhara</h4>
+                            <p>Women empower special SB Account for pensioners</p>
+                            <span class="info"><i class="fa-solid fa-location-dot"></i> AP + TG + HCR Main Edition</span>
+                            <span class="info"><i class="fa-regular fa-file-image"></i> Ad Format:  <b>Half Page Ad</b></span>
+                            <div class="estimPrice">
+                              <i class="fa-solid fa-file-invoice-dollar"></i>
+                              <h2>2.24 L <span>Estimated Value</span></h2>
+                            </div>
                           </div>
-                          <h4>Canara Bank  |  Jeevan Dhara</h4>
-                          <p>Women empower special SB Account for pensioners</p>
-                          <span class="info"><i class="fa-solid fa-location-dot"></i> AP + TG + HCR Main Edition</span>
-                          <span class="info"><i class="fa-regular fa-file-image"></i> Ad Format:  <b>Half Page Ad</b></span>
-                          <div class="estimPrice">
-                            <i class="fa-solid fa-file-invoice-dollar"></i>
-                            <h2>2.24 L <span>Estimated Value</span></h2>
+                        </div>
+                        <div class="adDetailCard">
+                          <div class="theme">
+                            <img src="./assets/images/tvs3.jpg" alt="" />
+                          </div>
+                          <div class="ad-details">
+                            <button class="showPreview">
+                              <i class="fa-solid fa-eye"></i> <span>Preview Ad</span>
+                            </button>
+                            <div class="editions">
+                              <span class="eenadu">Eenadu</span>
+                              <span class="sakshi">Sakshi</span>
+                            </div>
+                            <div class="date-page">
+                              <span><i class="fa-regular fa-file-lines"></i> Page: 14</span>
+                              <span><i class="fa-solid fa-calendar-days"></i> Apr 17 2025</span>
+                            </div>
+                            <h4>Canara Bank  |  Jeevan Dhara</h4>
+                            <p>Women empower special SB Account for pensioners</p>
+                            <span class="info"><i class="fa-solid fa-location-dot"></i> AP + TG + HCR Main Edition</span>
+                            <span class="info"><i class="fa-regular fa-file-image"></i> Ad Format:  <b>Half Page Ad</b></span>
+                            <div class="estimPrice">
+                              <i class="fa-solid fa-file-invoice-dollar"></i>
+                              <h2>2.24 L <span>Estimated Value</span></h2>
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div class="adDetailCard">
-                        <div class="theme">
-                          <img src="./assets/images/dummy.jpg" alt="" />
+
+                      <div class="preview-cards" id="bhima-ktk">
+                        <div class="adDetailCard">
+                          <div class="theme">
+                            <img src="./assets/images/bhima-ktk1.jpg" alt="" />
+                          </div>
+                          <div class="ad-details">
+                            <button class="showPreview">
+                              <i class="fa-solid fa-eye"></i> <span>Preview Ad</span>
+                            </button>
+                            <div class="editions">
+                              <span class="eenadu">Eenadu</span>
+                              <span class="sakshi">Sakshi</span>
+                            </div>
+                            <div class="date-page">
+                              <span><i class="fa-regular fa-file-lines"></i> Page: 14</span>
+                              <span><i class="fa-solid fa-calendar-days"></i> Apr 17 2025</span>
+                            </div>
+                            <h4>Canara Bank  |  Jeevan Dhara</h4>
+                            <p>Women empower special SB Account for pensioners</p>
+                            <span class="info"><i class="fa-solid fa-location-dot"></i> AP + TG + HCR Main Edition</span>
+                            <span class="info"><i class="fa-regular fa-file-image"></i> Ad Format:  <b>Half Page Ad</b></span>
+                            <div class="estimPrice">
+                              <i class="fa-solid fa-file-invoice-dollar"></i>
+                              <h2>2.24 L <span>Estimated Value</span></h2>
+                            </div>
+                          </div>
                         </div>
-                        <div class="ad-details">
-                          <button class="showPreview">
-                            <i class="fa-solid fa-eye"></i> <span>Preview Ad</span>
-                          </button>
-                          <div class="editions">
-                            <span class="eenadu">Eenadu</span>
-                            <span class="sakshi">Sakshi</span>
+                        <div class="adDetailCard">
+                          <div class="theme">
+                            <img src="./assets/images/bhima-ktk2.jpg" alt="" />
                           </div>
-                          <div class="date-page">
-                            <span><i class="fa-regular fa-file-lines"></i> Page: 14</span>
-                            <span><i class="fa-solid fa-calendar-days"></i> Apr 17 2025</span>
+                          <div class="ad-details">
+                            <button class="showPreview">
+                              <i class="fa-solid fa-eye"></i> <span>Preview Ad</span>
+                            </button>
+                            <div class="editions">
+                              <span class="eenadu">Eenadu</span>
+                              <span class="sakshi">Sakshi</span>
+                            </div>
+                            <div class="date-page">
+                              <span><i class="fa-regular fa-file-lines"></i> Page: 14</span>
+                              <span><i class="fa-solid fa-calendar-days"></i> Apr 17 2025</span>
+                            </div>
+                            <h4>Canara Bank  |  Jeevan Dhara</h4>
+                            <p>Women empower special SB Account for pensioners</p>
+                            <span class="info"><i class="fa-solid fa-location-dot"></i> AP + TG + HCR Main Edition</span>
+                            <span class="info"><i class="fa-regular fa-file-image"></i> Ad Format:  <b>Half Page Ad</b></span>
+                            <div class="estimPrice">
+                              <i class="fa-solid fa-file-invoice-dollar"></i>
+                              <h2>2.24 L <span>Estimated Value</span></h2>
+                            </div>
                           </div>
-                          <h4>Canara Bank  |  Jeevan Dhara</h4>
-                          <p>Women empower special SB Account for pensioners</p>
-                          <span class="info"><i class="fa-solid fa-location-dot"></i> AP + TG + HCR Main Edition</span>
-                          <span class="info"><i class="fa-regular fa-file-image"></i> Ad Format:  <b>Half Page Ad</b></span>
-                          <div class="estimPrice">
-                            <i class="fa-solid fa-file-invoice-dollar"></i>
-                            <h2>2.24 L <span>Estimated Value</span></h2>
+                        </div>
+                        <div class="adDetailCard">
+                          <div class="theme">
+                            <img src="./assets/images/bhima-ktk3.jpg" alt="" />
+                          </div>
+                          <div class="ad-details">
+                            <button class="showPreview">
+                              <i class="fa-solid fa-eye"></i> <span>Preview Ad</span>
+                            </button>
+                            <div class="editions">
+                              <span class="eenadu">Eenadu</span>
+                              <span class="sakshi">Sakshi</span>
+                            </div>
+                            <div class="date-page">
+                              <span><i class="fa-regular fa-file-lines"></i> Page: 14</span>
+                              <span><i class="fa-solid fa-calendar-days"></i> Apr 17 2025</span>
+                            </div>
+                            <h4>Canara Bank  |  Jeevan Dhara</h4>
+                            <p>Women empower special SB Account for pensioners</p>
+                            <span class="info"><i class="fa-solid fa-location-dot"></i> AP + TG + HCR Main Edition</span>
+                            <span class="info"><i class="fa-regular fa-file-image"></i> Ad Format:  <b>Half Page Ad</b></span>
+                            <div class="estimPrice">
+                              <i class="fa-solid fa-file-invoice-dollar"></i>
+                              <h2>2.24 L <span>Estimated Value</span></h2>
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div class="adDetailCard">
-                        <div class="theme">
-                          <img src="./assets/images/dummy.jpg" alt="" />
+
+                      <div class="preview-cards" id="ather-motors">
+                        <div class="adDetailCard">
+                          <div class="theme">
+                            <img src="./assets/images/ather1.jpg" alt="" />
+                          </div>
+                          <div class="ad-details">
+                            <button class="showPreview">
+                              <i class="fa-solid fa-eye"></i> <span>Preview Ad</span>
+                            </button>
+                            <div class="editions">
+                              <span class="eenadu">Eenadu</span>
+                              <span class="sakshi">Sakshi</span>
+                            </div>
+                            <div class="date-page">
+                              <span><i class="fa-regular fa-file-lines"></i> Page: 14</span>
+                              <span><i class="fa-solid fa-calendar-days"></i> Apr 17 2025</span>
+                            </div>
+                            <h4>Canara Bank  |  Jeevan Dhara</h4>
+                            <p>Women empower special SB Account for pensioners</p>
+                            <span class="info"><i class="fa-solid fa-location-dot"></i> AP + TG + HCR Main Edition</span>
+                            <span class="info"><i class="fa-regular fa-file-image"></i> Ad Format:  <b>Half Page Ad</b></span>
+                            <div class="estimPrice">
+                              <i class="fa-solid fa-file-invoice-dollar"></i>
+                              <h2>2.24 L <span>Estimated Value</span></h2>
+                            </div>
+                          </div>
                         </div>
-                        <div class="ad-details">
-                          <button class="showPreview">
-                            <i class="fa-solid fa-eye"></i> <span>Preview Ad</span>
-                          </button>
-                          <div class="editions">
-                            <span class="eenadu">Eenadu</span>
-                            <span class="sakshi">Sakshi</span>
+                        <div class="adDetailCard">
+                          <div class="theme">
+                            <img src="./assets/images/ather2.jpg" alt="" />
                           </div>
-                          <div class="date-page">
-                            <span><i class="fa-regular fa-file-lines"></i> Page: 14</span>
-                            <span><i class="fa-solid fa-calendar-days"></i> Apr 17 2025</span>
-                          </div>
-                          <h4>Canara Bank  |  Jeevan Dhara</h4>
-                          <p>Women empower special SB Account for pensioners</p>
-                          <span class="info"><i class="fa-solid fa-location-dot"></i> AP + TG + HCR Main Edition</span>
-                          <span class="info"><i class="fa-regular fa-file-image"></i> Ad Format:  <b>Half Page Ad</b></span>
-                          <div class="estimPrice">
-                            <i class="fa-solid fa-file-invoice-dollar"></i>
-                            <h2>2.24 L <span>Estimated Value</span></h2>
+                          <div class="ad-details">
+                            <button class="showPreview">
+                              <i class="fa-solid fa-eye"></i> <span>Preview Ad</span>
+                            </button>
+                            <div class="editions">
+                              <span class="eenadu">Eenadu</span>
+                              <span class="sakshi">Sakshi</span>
+                            </div>
+                            <div class="date-page">
+                              <span><i class="fa-regular fa-file-lines"></i> Page: 14</span>
+                              <span><i class="fa-solid fa-calendar-days"></i> Apr 17 2025</span>
+                            </div>
+                            <h4>Canara Bank  |  Jeevan Dhara</h4>
+                            <p>Women empower special SB Account for pensioners</p>
+                            <span class="info"><i class="fa-solid fa-location-dot"></i> AP + TG + HCR Main Edition</span>
+                            <span class="info"><i class="fa-regular fa-file-image"></i> Ad Format:  <b>Half Page Ad</b></span>
+                            <div class="estimPrice">
+                              <i class="fa-solid fa-file-invoice-dollar"></i>
+                              <h2>2.24 L <span>Estimated Value</span></h2>
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div class="adDetailCard">
-                        <div class="theme">
-                          <img src="./assets/images/dummy.jpg" alt="" />
+
+                      <div class="preview-cards" id="canara-bank">
+                        <div class="adDetailCard">
+                          <div class="theme">
+                            <img src="./assets/images/canara1.jpg" alt="" />
+                          </div>
+                          <div class="ad-details">
+                            <button class="showPreview">
+                              <i class="fa-solid fa-eye"></i> <span>Preview Ad</span>
+                            </button>
+                            <div class="editions">
+                              <span class="eenadu">Eenadu</span>
+                              <span class="sakshi">Sakshi</span>
+                            </div>
+                            <div class="date-page">
+                              <span><i class="fa-regular fa-file-lines"></i> Page: 14</span>
+                              <span><i class="fa-solid fa-calendar-days"></i> Apr 17 2025</span>
+                            </div>
+                            <h4>Canara Bank  |  Jeevan Dhara</h4>
+                            <p>Women empower special SB Account for pensioners</p>
+                            <span class="info"><i class="fa-solid fa-location-dot"></i> AP + TG + HCR Main Edition</span>
+                            <span class="info"><i class="fa-regular fa-file-image"></i> Ad Format:  <b>Half Page Ad</b></span>
+                            <div class="estimPrice">
+                              <i class="fa-solid fa-file-invoice-dollar"></i>
+                              <h2>2.24 L <span>Estimated Value</span></h2>
+                            </div>
+                          </div>
                         </div>
-                        <div class="ad-details">
-                          <button class="showPreview">
-                            <i class="fa-solid fa-eye"></i> <span>Preview Ad</span>
-                          </button>
-                          <div class="editions">
-                            <span class="eenadu">Eenadu</span>
-                            <span class="sakshi">Sakshi</span>
+                        <div class="adDetailCard">
+                          <div class="theme">
+                            <img src="./assets/images/canara2.jpg" alt="" />
                           </div>
-                          <div class="date-page">
-                            <span><i class="fa-regular fa-file-lines"></i> Page: 14</span>
-                            <span><i class="fa-solid fa-calendar-days"></i> Apr 17 2025</span>
+                          <div class="ad-details">
+                            <button class="showPreview">
+                              <i class="fa-solid fa-eye"></i> <span>Preview Ad</span>
+                            </button>
+                            <div class="editions">
+                              <span class="eenadu">Eenadu</span>
+                              <span class="sakshi">Sakshi</span>
+                            </div>
+                            <div class="date-page">
+                              <span><i class="fa-regular fa-file-lines"></i> Page: 14</span>
+                              <span><i class="fa-solid fa-calendar-days"></i> Apr 17 2025</span>
+                            </div>
+                            <h4>Canara Bank  |  Jeevan Dhara</h4>
+                            <p>Women empower special SB Account for pensioners</p>
+                            <span class="info"><i class="fa-solid fa-location-dot"></i> AP + TG + HCR Main Edition</span>
+                            <span class="info"><i class="fa-regular fa-file-image"></i> Ad Format:  <b>Half Page Ad</b></span>
+                            <div class="estimPrice">
+                              <i class="fa-solid fa-file-invoice-dollar"></i>
+                              <h2>2.24 L <span>Estimated Value</span></h2>
+                            </div>
                           </div>
-                          <h4>Canara Bank  |  Jeevan Dhara</h4>
-                          <p>Women empower special SB Account for pensioners</p>
-                          <span class="info"><i class="fa-solid fa-location-dot"></i> AP + TG + HCR Main Edition</span>
-                          <span class="info"><i class="fa-regular fa-file-image"></i> Ad Format:  <b>Half Page Ad</b></span>
-                          <div class="estimPrice">
-                            <i class="fa-solid fa-file-invoice-dollar"></i>
-                            <h2>2.24 L <span>Estimated Value</span></h2>
+                        </div>                        
+                        <div class="adDetailCard">
+                          <div class="theme">
+                            <img src="./assets/images/canara3.jpg" alt="" />
+                          </div>
+                          <div class="ad-details">
+                            <button class="showPreview">
+                              <i class="fa-solid fa-eye"></i> <span>Preview Ad</span>
+                            </button>
+                            <div class="editions">
+                              <span class="eenadu">Eenadu</span>
+                              <span class="sakshi">Sakshi</span>
+                            </div>
+                            <div class="date-page">
+                              <span><i class="fa-regular fa-file-lines"></i> Page: 14</span>
+                              <span><i class="fa-solid fa-calendar-days"></i> Apr 17 2025</span>
+                            </div>
+                            <h4>Canara Bank  |  Jeevan Dhara</h4>
+                            <p>Women empower special SB Account for pensioners</p>
+                            <span class="info"><i class="fa-solid fa-location-dot"></i> AP + TG + HCR Main Edition</span>
+                            <span class="info"><i class="fa-regular fa-file-image"></i> Ad Format:  <b>Half Page Ad</b></span>
+                            <div class="estimPrice">
+                              <i class="fa-solid fa-file-invoice-dollar"></i>
+                              <h2>2.24 L <span>Estimated Value</span></h2>
+                            </div>
+                          </div>
+                        </div>                        
+                        <div class="adDetailCard">
+                          <div class="theme">
+                            <img src="./assets/images/canara4.jpg" alt="" />
+                          </div>
+                          <div class="ad-details">
+                            <button class="showPreview">
+                              <i class="fa-solid fa-eye"></i> <span>Preview Ad</span>
+                            </button>
+                            <div class="editions">
+                              <span class="eenadu">Eenadu</span>
+                              <span class="sakshi">Sakshi</span>
+                            </div>
+                            <div class="date-page">
+                              <span><i class="fa-regular fa-file-lines"></i> Page: 14</span>
+                              <span><i class="fa-solid fa-calendar-days"></i> Apr 17 2025</span>
+                            </div>
+                            <h4>Canara Bank  |  Jeevan Dhara</h4>
+                            <p>Women empower special SB Account for pensioners</p>
+                            <span class="info"><i class="fa-solid fa-location-dot"></i> AP + TG + HCR Main Edition</span>
+                            <span class="info"><i class="fa-regular fa-file-image"></i> Ad Format:  <b>Half Page Ad</b></span>
+                            <div class="estimPrice">
+                              <i class="fa-solid fa-file-invoice-dollar"></i>
+                              <h2>2.24 L <span>Estimated Value</span></h2>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="preview-cards" id="amazon">
+                        <div class="adDetailCard">
+                          <div class="theme">
+                            <img src="./assets/images/amazon1.jpg" alt="" />
+                          </div>
+                          <div class="ad-details">
+                            <button class="showPreview">
+                              <i class="fa-solid fa-eye"></i> <span>Preview Ad</span>
+                            </button>
+                            <div class="editions">
+                              <span class="eenadu">Eenadu</span>
+                              <span class="sakshi">Sakshi</span>
+                            </div>
+                            <div class="date-page">
+                              <span><i class="fa-regular fa-file-lines"></i> Page: 14</span>
+                              <span><i class="fa-solid fa-calendar-days"></i> Apr 17 2025</span>
+                            </div>
+                            <h4>Canara Bank  |  Jeevan Dhara</h4>
+                            <p>Women empower special SB Account for pensioners</p>
+                            <span class="info"><i class="fa-solid fa-location-dot"></i> AP + TG + HCR Main Edition</span>
+                            <span class="info"><i class="fa-regular fa-file-image"></i> Ad Format:  <b>Half Page Ad</b></span>
+                            <div class="estimPrice">
+                              <i class="fa-solid fa-file-invoice-dollar"></i>
+                              <h2>2.24 L <span>Estimated Value</span></h2>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="adDetailCard">
+                          <div class="theme">
+                            <img src="./assets/images/amazon2.jpg" alt="" />
+                          </div>
+                          <div class="ad-details">
+                            <button class="showPreview">
+                              <i class="fa-solid fa-eye"></i> <span>Preview Ad</span>
+                            </button>
+                            <div class="editions">
+                              <span class="eenadu">Eenadu</span>
+                              <span class="sakshi">Sakshi</span>
+                            </div>
+                            <div class="date-page">
+                              <span><i class="fa-regular fa-file-lines"></i> Page: 14</span>
+                              <span><i class="fa-solid fa-calendar-days"></i> Apr 17 2025</span>
+                            </div>
+                            <h4>Canara Bank  |  Jeevan Dhara</h4>
+                            <p>Women empower special SB Account for pensioners</p>
+                            <span class="info"><i class="fa-solid fa-location-dot"></i> AP + TG + HCR Main Edition</span>
+                            <span class="info"><i class="fa-regular fa-file-image"></i> Ad Format:  <b>Half Page Ad</b></span>
+                            <div class="estimPrice">
+                              <i class="fa-solid fa-file-invoice-dollar"></i>
+                              <h2>2.24 L <span>Estimated Value</span></h2>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
 
-                  <!-- Alphabetical Order Start -->
-                  <div class="alpOrder">
-                    <ul>
-                      <li>A</li>
-                      <li>B</li>
-                      <li class="active">C</li>
-                      <li>D</li>
-                      <li>E</li>
-                      <li>F</li>
-                      <li>G</li>
-                      <li>H</li>
-                      <li>I</li>
-                      <li>J</li>
-                      <li>K</li>
-                      <li>L</li>
-                      <li>M</li>
-                      <li>N</li>
-                      <li>O</li>
-                      <li>P</li>
-                      <li>Q</li>
-                      <li>R</li>
-                      <li>S</li>
-                      <li>T</li>
-                      <li>U</li>
-                      <li>V</li>
-                      <li>W</li>
-                      <li>X</li>
-                      <li>Y</li>
-                      <li>Z</li>
-                    </ul>
-                  </div><!-- Alphabetical Order End -->
+                    <!-- Alphabetical Order Start -->
+                    <div class="alpOrder">
+                      <ul>
+                        <li>A</li>
+                        <li>B</li>
+                        <li class="active">C</li>
+                        <li>D</li>
+                        <li>E</li>
+                        <li>F</li>
+                        <li>G</li>
+                        <li>H</li>
+                        <li>I</li>
+                        <li>J</li>
+                        <li>K</li>
+                        <li>L</li>
+                        <li>M</li>
+                        <li>N</li>
+                        <li>O</li>
+                        <li>P</li>
+                        <li>Q</li>
+                        <li>R</li>
+                        <li>S</li>
+                        <li>T</li>
+                        <li>U</li>
+                        <li>V</li>
+                        <li>W</li>
+                        <li>X</li>
+                        <li>Y</li>
+                        <li>Z</li>
+                      </ul>
+                    </div><!-- Alphabetical Order End -->                  
+                  </div>
                 </div>
               </div>
               <div

@@ -152,8 +152,8 @@ p {
 
 /* Custom Scrollbar Styles Declaration */
 ::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
+    width: 6px;
+    height: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -161,9 +161,10 @@ p {
 }
 
 ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    background: #252525;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    background: #002ae6;
+    background-image: linear-gradient(to bottom, #ee00ce 0%, #00deee 25%, #0018ee 50%, #ff3b3b 75%, #f5bc00 100%);
 }
 
 /* --- Global Font Declaration --- */
@@ -697,7 +698,8 @@ button.btn-gradient:hover {
     display: flex;
     flex-direction: column;
     padding: 24px;
-    height: calc(100vh - 70px);
+    /* height: calc(100vh - 70px); */
+    height: auto;
 }
 
 /* --- LEFT SIDE NAVIGATION */
@@ -1237,8 +1239,8 @@ body.dark-mode .accordion-button::after {
 /* --- Back to top button --- */
 .progress-wrap {
     position: fixed;
-    right: 20px;
-    bottom: 40px;
+    right: 10px;
+    bottom: 20px;
     height: 46px;
     width: 46px;
     cursor: pointer;

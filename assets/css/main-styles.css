@@ -16,7 +16,7 @@ body {
     background-color: transparent;
     border-radius: var(--border-radius-huge);
     padding: 0;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 .collapsible-content {
@@ -641,9 +641,62 @@ body.dark-mode .input-group i.icon {
 .table-container {
     position: relative;
     display: flex;
+    flex-direction: column;
     height: 100%;
     max-height: 750px;
     overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.table-container::-webkit-scrollbar {
+    display: none;
+}
+
+.table-container #dateNotifier {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius-medium);
+    padding: .15rem .6rem;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    border: 2px solid var(--border-color);
+    box-shadow: var(--shadow);
+    gap: .75rem;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+    transform: translateY(-100%);
+    top: 28px;
+    margin-bottom: -30px;
+    left: 26%;
+}
+
+.table-container #dateNotifier.visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.table-container #dateNotifier em {
+    background-color: var(--bg-sidebar);
+    border-radius: 4px;
+    font-size: 12px;
+    font-style: normal;
+    text-transform: uppercase;
+    padding: .1rem .3rem;
+}
+
+.as-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: max-content;
+    flex: 1;
 }
 
 .rwd-table,
@@ -738,7 +791,8 @@ td.splWidth {
 
 .table.dashboard-brands {
     margin: 0;
-    width: calc(100% - 600px);
+    /* width: calc(100% - 600px); */
+    width: 100%;
 }
 
 @media (min-width: 480px) {
@@ -796,18 +850,35 @@ body.dark-mode .spent-value {
 .previewPane {
     position: sticky;
     top: 0;
-    width: 100%;
-    max-width: 600px;
-    height: max-content;
-    max-height: 750px;
     background-color: var(--preview-pane-bg);
-    padding: 3.5rem 1rem 1rem;
+    padding: 0;
     right: 0;
     overflow-y: auto;
+    height: -webkit-fill-available;
     flex-grow: 1;
+    transition: all .5s ease-in-out;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+}
+
+.previewPane::-webkit-scrollbar {
+    display: none;
+}
+
+.previewPane.active {
+    width: 100%;
+    visibility: visible;
+    opacity: 1;
+    max-width: 600px;
+    height: -webkit-fill-available;
+    max-height: 750px;
+    padding: 3.5rem 1rem 1rem;
 }
 
 .previewPane .spacer {
@@ -816,7 +887,6 @@ body.dark-mode .spent-value {
 }
 
 .paneTitle {
-    width: 100%;
     position: sticky;
     top: -3.5rem;
     width: -webkit-fill-available;
@@ -827,11 +897,31 @@ body.dark-mode .spent-value {
     z-index: 2;
     padding: 1em;
     margin: 0 -1rem;
+    border-left: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.previewPane .closePreview {
+    position: absolute;
+    top: 46px;
+    right: 10px;
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.previewPane .closePreview img {
+    max-width: 100%;
 }
 
 .preview-cards {
     padding-top: 1.2rem;
-    display: flex;
+    display: none;
     align-items: flex-start;
     justify-content: flex-start;
     position: relative;
@@ -839,6 +929,10 @@ body.dark-mode .spent-value {
     flex-wrap: wrap;
     gap: .85rem;
     width: 100%;
+}
+
+.preview-cards.active {
+    display: flex;
 }
 
 .preview-cards .adDetailCard {
@@ -1011,10 +1105,10 @@ body.dark-mode .spent-value {
 .alpOrder {
     position: absolute;
     left: 0;
-    top: 115px;
+    top: 65px;
     background-color: var(--alphabets-bg);
     border-radius: 0 18px 18px 0;
-    max-height: calc(100% - 125px);
+    max-height: 80%;
     display: flex;
     flex-grow: 1;
     overflow-y: auto;

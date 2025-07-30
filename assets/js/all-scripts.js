@@ -247,3 +247,48 @@ $(document).ready(function () {
 $(function () {
   $(".datepicker").datepicker();
 });
+
+
+// Sticky Date Notifier on Data Table
+document.addEventListener("DOMContentLoaded", function () {
+  const wrapper = document.getElementById("tableContainer");
+  const notifier = document.getElementById("dateNotifier");
+  const threshold = 50;
+  let isVisible = false;
+
+  wrapper.addEventListener("scroll", function () {
+    const st = this.scrollTop;
+
+    if (st >= threshold && !isVisible) {
+      notifier.classList.add("visible");
+      notifier.style.position = "sticky";
+      isVisible = true;
+    } else if (st < threshold && isVisible) {
+      notifier.classList.remove("visible");
+      isVisible = false;
+    }
+  });
+});
+
+
+
+
+
+// Show preview pane based on Table Row
+
+$(document).ready(function () {
+    $('.previewPane').removeClass('active');
+
+    $('#dboardBrands tbody tr').on('click', function () {
+        const clientName = $(this).data('client').toLowerCase().replace(/\s+/g, '-');
+
+        $('.previewPane').addClass('active');
+        $('.preview-cards').removeClass('active');
+        $('#' + clientName).addClass('active');
+    });
+
+    $('.closePreview').on('click', function () {
+        $('.previewPane').removeClass('active');
+        $('.preview-cards').removeClass('active');
+    });
+});
