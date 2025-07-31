@@ -846,6 +846,101 @@ body.dark-mode .spent-value {
     background-color: rgba(25, 135, 84, 0.2);
 }
 
+.dayWiseStats {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    height: auto;
+}
+
+.dayWiseStats .daysList {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+.dayWiseStats .daysList .dayCards {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    padding: 1.5rem 1.5rem 1.5rem 3rem;
+    border-bottom: 1px solid var(--switch-border-color);
+    gap: .5rem;
+}
+
+.dayWiseStats .daysList .dayCards .showDate {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius-medium);
+    padding: .15rem .6rem;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    border: 2px solid var(--border-color);
+    box-shadow: var(--shadow);
+    gap: .75rem;
+    position: absolute;
+    transition: all .5s ease-in-out;
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dayWiseStats .daysList .dayCards .showDate em {
+    background-color: var(--bg-sidebar);
+    border-radius: 4px;
+    font-size: 12px;
+    font-style: normal;
+    text-transform: uppercase;
+    padding: .1rem .3rem;
+}
+
+.dayWiseStats .daysList .dayCards .brandCard {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: var(--brand-card-bg);
+    border: 1px solid var(--brand-card-border);
+    border-radius: var(--border-radius-small);
+    padding: .7rem;
+    flex-direction: column;
+    width: fit-content;
+    min-width: 220px;
+    position: relative;
+    gap: .7rem;
+}
+
+.dayWiseStats .daysList .dayCards .brandCard.w2n-present {
+    background-color: var(--brand-card-bg-w2n-present);
+    border-color: var(--brand-card-border-w2n-present);
+}
+
+.dayWiseStats .daysList .dayCards .brandCard h2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 16px;
+    color: var(--active-txt-color);
+    gap: .6rem;
+}
+
+.row-justify {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
+}
+
 /* Ad Detail Cards */
 .previewPane {
     position: sticky;
@@ -1156,20 +1251,6 @@ body.dark-mode .spent-value {
     color: var(--alphabets-bg);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .dashboard-brands .table-head .column:first-child,
 .dashboard-brands .table-row .column:first-child {
     padding-left: 36px;
@@ -1182,14 +1263,16 @@ body.dark-mode .spent-value {
     gap: .5rem;
 }
 
-.brand .brand-logo {
+.brand .brand-logo,
+.brand-logo {
     width: 36px;
     height: 36px;
     border-radius: 50%;
     overflow: hidden;
 }
 
-.brand .brand-logo img {
+.brand .brand-logo img,
+.brand-logo img {
     width: 100%;
     height: 100%;
     object-fit: fill;
@@ -1215,6 +1298,11 @@ body.dark-mode .spent-value {
 }
 
 .spent.w2n-present {
+    background-color: var(--positive) !important;
+    color: var(--text-light);
+}
+
+.brandCard.w2n-present .spent {
     background-color: var(--positive) !important;
     color: var(--text-light);
 }

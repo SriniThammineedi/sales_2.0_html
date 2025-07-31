@@ -52,6 +52,10 @@
     --brown-berry: #BF875C;
     --change-gray-toblue: #1D2026;
     --alphabets-bg: #061527;
+    --brand-card-bg: #F8F8F8;
+    --brand-card-border: #DADADA;
+    --brand-card-bg-w2n-present: #E6FFDD;
+    --brand-card-border-w2n-present: #CBF5BD;
 }
 
 body.dark-mode {
@@ -93,6 +97,10 @@ body.dark-mode {
     --tr-bg: #212125;
     --tr-even-bg: #151519;
     --tr-hover-bg: #415C71;
+    --brand-card-bg: #313131;
+    --brand-card-border: rgba(255, 255, 255, .2);
+    --brand-card-bg-w2n-present: #79966f;
+    --brand-card-border-w2n-present: #8fad85;
 
 }
 
