@@ -82,6 +82,12 @@
         .nav-buttons button:hover {
             background: #fff;
         }
+
+        .nav-buttons button.disabled {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
     </style>
 </head>
 <body>
@@ -146,48 +152,62 @@
 
     <script>
         const videos = document.querySelectorAll(".presentVideo video");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
         let current = 0;
 
         function showVideo(index) {
-        videos.forEach((video, i) => {
+            videos.forEach((video, i) => {
             video.classList.remove("active");
             video.pause();
             video.currentTime = 0;
-        });
+            });
 
-        videos[index].classList.add("active");
-        videos[index].play();
+            videos[index].classList.add("active");
+            videos[index].play();
+            updateNavButtons();
         }
 
         function nextVideo() {
-        if (current < videos.length - 1) {
+            if (current < videos.length - 1) {
             current++;
             showVideo(current);
-        }
+            }
         }
 
         function prevVideo() {
-        if (current > 0) {
+            if (current > 0) {
             current--;
             showVideo(current);
-        }
-        }
-
-        // Handle autoplay to next on video end
-        videos.forEach((video, index) => {
-        video.addEventListener("ended", () => {
-            if (index < videos.length - 1) {
-            current = index + 1;
-            showVideo(current);
             }
-        });
+        }
+
+        function updateNavButtons() {
+            if (current === 0) {
+                prevBtn.classList.add("disabled");
+            } else {
+                prevBtn.classList.remove("disabled");
+            }
+
+            if (current === videos.length - 1) {
+                nextBtn.classList.add("disabled");
+            } else {
+                nextBtn.classList.remove("disabled");
+            }
+        }
+
+        videos.forEach((video, index) => {
+            video.addEventListener("ended", () => {
+            if (index < videos.length - 1) {
+                current = index + 1;
+                showVideo(current);
+            }
+            });
         });
 
-        // Prev & Next Button events
-        document.getElementById("prevBtn").addEventListener("click", prevVideo);
-        document.getElementById("nextBtn").addEventListener("click", nextVideo);
+        prevBtn.addEventListener("click", prevVideo);
+        nextBtn.addEventListener("click", nextVideo);
 
-        // Init
         showVideo(current);
   </script>
 </body>
