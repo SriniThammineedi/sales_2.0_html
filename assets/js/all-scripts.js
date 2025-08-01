@@ -275,7 +275,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Show preview pane based on Table Row
-
 $(document).ready(function () {
     $('.previewPane').removeClass('active');
 
@@ -292,3 +291,40 @@ $(document).ready(function () {
         $('.preview-cards').removeClass('active');
     });
 });
+
+
+// Show preview pane based on Daywise Card
+$(document).ready(function () {
+    $('.previewPane').removeClass('active');
+
+    $("#dayWiseStats .dayCards .brandCard").on("click", function () {
+      const clientName = $(this)
+        .data("client")
+        .toLowerCase()
+        .replace(/\s+/g, "-");
+
+      $(".previewPane").addClass("active");
+      $(".preview-cards").removeClass("active");
+      $("#" + clientName).addClass("active");
+    });
+
+    $('.closePreview').on('click', function () {
+        $('.previewPane').removeClass('active');
+        $('.preview-cards').removeClass('active');
+    });
+});
+
+
+
+
+// Initialize Swiper Slider for Reminders
+  var swiper = new Swiper(".swiper-container", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    observer: true,
+    observeParents: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });

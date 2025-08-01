@@ -27,8 +27,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
     />
-
     <link rel="stylesheet" href="./assets/css/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!-- Theme Style Sheet -->
     <link rel="stylesheet" href="./assets/css/main-styles.css" />
@@ -180,13 +180,13 @@
               <div class="accordion-body">
                 <ul>
                   <li>
-                    <a href="dashboard.html" class="nav-link active">
+                    <a href="index.html" class="nav-link active">
                       <i class="icon dashboard"></i>
                       Dashboard
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="nav-link"
+                    <a href="account-management.html" class="nav-link"
                       ><i class="icon acc-management"></i> Account Management
                     </a>
                   </li>
@@ -656,38 +656,92 @@
                   <li><img src="./assets/images/rem6.png" alt="" /></li>
                 </ul>
                 <label for="" class="more-reminders">+12</label>
-                <a href="" class="show-all">Show all messages</a>
+                <a href="" class="show-all">Show all messages</a>                
+              </div>
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="reminder-details">
+                      <div class="reminder-content">
+                        <i class="thumbnail"
+                          ><img src="./assets/images/mansion-house.png" alt=""
+                        /></i>
+                        <h3>Mansions Home Constructions & Realty</h3>
+                        <p>
+                          Today you have a face to face meeting with
+                          <strong>Mr. Parag Shinde</strong> and needs to finalize the
+                          deal today itself.
+                        </p>
+                      </div>
+                      <div class="reminder-actions">
+                        <button title="Call" class="reschedule">
+                          <img src="./assets/images/re-schedule.svg" alt="" />
+                        </button>
+                        <button title="Location" class="message">
+                          <img src="./assets/images/message.svg" alt="" />
+                        </button>
+                        <button title="Info" class="video-call">
+                          <img src="./assets/images/video-call.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="reminder-details">
+                      <div class="reminder-content">
+                        <i class="thumbnail"
+                          ><img src="./assets/images/brand4.png" alt=""
+                        /></i>
+                        <h3>Canara Bank Commercial Promotionals</h3>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio tempore eum <strong>Mrs. Abhilipsa Panda</strong> cupiditate similique voluptates pariatur mollitia at, fuga asperiores molestiae qui quos accusamus illum tempora consequatur voluptatem, eligendi, itaque voluptate.
+                        </p>
+                      </div>
+                      <div class="reminder-actions">
+                        <button title="Call" class="reschedule">
+                          <img src="./assets/images/re-schedule.svg" alt="" />
+                        </button>
+                        <button title="Location" class="message">
+                          <img src="./assets/images/message.svg" alt="" />
+                        </button>
+                        <button title="Info" class="video-call">
+                          <img src="./assets/images/video-call.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>                  
+                  <div class="swiper-slide">
+                    <div class="reminder-details">
+                      <div class="reminder-content">
+                        <i class="thumbnail"
+                          ><img src="./assets/images/brand5.png" alt=""
+                        /></i>
+                        <h3>Amazon Online Shopping Offers Mela</h3>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio tempore eum cupiditate similique voluptates pariatur mollitia at, fuga asperiores molestiae qui quos accusamus illum tempora consequatur voluptatem, eligendi, itaque voluptate.
+                        </p>
+                      </div>
+                      <div class="reminder-actions">
+                        <button title="Call" class="reschedule">
+                          <img src="./assets/images/re-schedule.svg" alt="" />
+                        </button>
+                        <button title="Location" class="message">
+                          <img src="./assets/images/message.svg" alt="" />
+                        </button>
+                        <button title="Info" class="video-call">
+                          <img src="./assets/images/video-call.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>                  
                 <div class="prev-next">
-                  <button class="previous">
+                  <button class="previous swiper-button-prev">
                     <img src="./assets/images/next-arrow.svg" alt="" />
                   </button>
                   <span>Prev/Next</span>
-                  <button class="next">
+                  <button class="next swiper-button-next">
                     <img src="./assets/images/next-arrow.svg" alt="" />
-                  </button>
-                </div>
-              </div>
-              <div class="reminder-details">
-                <div class="reminder-content">
-                  <i class="thumbnail"
-                    ><img src="./assets/images/mansion-house.png" alt=""
-                  /></i>
-                  <h3>Mansions Home Constructions & Realty</h3>
-                  <p>
-                    Today you have a face to face meeting with
-                    <strong>Mr. Parag Shinde</strong> and needs to finalize the
-                    deal today itself.
-                  </p>
-                </div>
-                <div class="reminder-actions">
-                  <button title="Call" class="reschedule">
-                    <img src="./assets/images/re-schedule.svg" alt="" />
-                  </button>
-                  <button title="Location" class="message">
-                    <img src="./assets/images/message.svg" alt="" />
-                  </button>
-                  <button title="Info" class="video-call">
-                    <img src="./assets/images/video-call.svg" alt="" />
                   </button>
                 </div>
               </div>
@@ -1804,12 +1858,356 @@
                 aria-labelledby="pills-profile-tab"
                 tabindex="0"
               >
-                <div class="dayWiseStats">
+                <div class="dayWiseStats" id="dayWiseStats">
                   <div class="as-row">
                     <div class="daysList">
                       <div class="dayCards">
                         <div class="showDate">
-                          <span>01/04/2025</span> <em>to</em> <span>25/04/2025</span>
+                          <span>Sunday - 27th July, 2025</span> <i class="w2n"><em>5</em></i> <i class="oth"><em>10</em></i>
+                        </div>
+                        <div class="brandCard" data-client="TVS Motors">
+                          <h2><i class="brand-logo"><img src="./assets/images/brand1.png" alt=""></i> <span>TVS Motors</span></h2>
+                          <div class="row-justify">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/toi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/eenadu.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/dinathanthi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                            <h5 class="spent">₹ 108.02 L</h5>
+                          </div>
+                        </div>
+                        <div class="brandCard w2n-present">
+                          <h2><i class="brand-logo"><img src="./assets/images/brand2.png" alt=""></i> <span>Bhima KTK</span></h2>
+                          <div class="row-justify">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/w2n-thumb.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                            <h5 class="spent">₹ 1.06 L</h5>
+                          </div>
+                        </div>
+                        <div class="brandCard">
+                          <h2><i class="brand-logo"><img src="./assets/images/brand3.png" alt=""></i> <span>Ather Motors</span></h2>
+                          <div class="row-justify">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/toi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/eenadu.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/dinathanthi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                            <h5 class="spent">₹ 7.00 L</h5>
+                          </div>
+                        </div>
+                        <div class="brandCard w2n-present">
+                          <h2><i class="brand-logo"><img src="./assets/images/brand4.png" alt=""></i> <span>Canara Bank</span></h2>
+                          <div class="row-justify">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/w2n-thumb.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                            <h5 class="spent">₹ 2.24 L</h5>
+                          </div>
+                        </div>
+                        <div class="brandCard w2n-present">
+                          <h2><i class="brand-logo"><img src="./assets/images/brand5.png" alt=""></i> <span>Amazon</span></h2>
+                          <div class="row-justify">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/w2n-thumb.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                            <h5 class="spent">₹ 10.28 L</h5>
+                          </div>
+                        </div>
+                        <div class="brandCard">
+                          <h2><i class="brand-logo"><img src="./assets/images/brand6.png" alt=""></i> <span>Flipkart</span></h2>
+                          <div class="row-justify">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/toi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/eenadu.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/dinathanthi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                            <h5 class="spent">₹ 3.05 L</h5>
+                          </div>
+                        </div>                        
+                        <div class="brandCard w2n-present">
+                          <h2><i class="brand-logo"><img src="./assets/images/brand7.png" alt=""></i> <span>Xiaomi/Poco</span></h2>
+                          <div class="row-justify">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/w2n-thumb.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                            <h5 class="spent">₹ 2.99 L</h5>
+                          </div>
+                        </div>
+                        <div class="brandCard">
+                          <h2><i class="brand-logo"><img src="./assets/images/brand8.png" alt=""></i> <span>Ikea</span></h2>
+                          <div class="row-justify">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/toi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/eenadu.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/dinathanthi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                            <h5 class="spent">₹ 7.01 L</h5>
+                          </div>
+                        </div>
+                        <div class="brandCard">
+                          <h2><i class="brand-logo"><img src="./assets/images/brand9.png" alt=""></i> <span>Titan</span></h2>
+                          <div class="row-justify">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/toi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/eenadu.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/dinathanthi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                            <h5 class="spent">₹ 30.00 L</h5>
+                          </div>
+                        </div> 
+                      </div>
+                      <div class="dayCards">
+                        <div class="showDate">
+                          <span>Saturday - 26th July, 2025</span> <i class="w2n"><em>5</em></i> <i class="oth"><em>10</em></i>
+                        </div>
+                        <div class="brandCard">
+                          <h2><i class="brand-logo"><img src="./assets/images/brand1.png" alt=""></i> <span>TVS Motors</span></h2>
+                          <div class="row-justify">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/toi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/eenadu.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/dinathanthi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                            <h5 class="spent">₹ 108.02 L</h5>
+                          </div>
+                        </div>
+                        <div class="brandCard w2n-present">
+                          <h2><i class="brand-logo"><img src="./assets/images/brand2.png" alt=""></i> <span>Bhima KTK</span></h2>
+                          <div class="row-justify">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/w2n-thumb.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                            <h5 class="spent">₹ 1.06 L</h5>
+                          </div>
+                        </div>
+                        <div class="brandCard">
+                          <h2><i class="brand-logo"><img src="./assets/images/brand3.png" alt=""></i> <span>Ather Motors</span></h2>
+                          <div class="row-justify">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/toi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/eenadu.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/dinathanthi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                            <h5 class="spent">₹ 7.00 L</h5>
+                          </div>
+                        </div>
+                        <div class="brandCard w2n-present">
+                          <h2><i class="brand-logo"><img src="./assets/images/brand4.png" alt=""></i> <span>Canara Bank</span></h2>
+                          <div class="row-justify">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/w2n-thumb.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                            <h5 class="spent">₹ 2.24 L</h5>
+                          </div>
+                        </div>
+                        <div class="brandCard w2n-present">
+                          <h2><i class="brand-logo"><img src="./assets/images/brand5.png" alt=""></i> <span>Amazon</span></h2>
+                          <div class="row-justify">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/w2n-thumb.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                            <h5 class="spent">₹ 10.28 L</h5>
+                          </div>
+                        </div>
+                        <div class="brandCard">
+                          <h2><i class="brand-logo"><img src="./assets/images/brand6.png" alt=""></i> <span>Flipkart</span></h2>
+                          <div class="row-justify">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/toi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/eenadu.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/dinathanthi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                            <h5 class="spent">₹ 3.05 L</h5>
+                          </div>
+                        </div>                        
+                        <div class="brandCard w2n-present">
+                          <h2><i class="brand-logo"><img src="./assets/images/brand7.png" alt=""></i> <span>Xiaomi/Poco</span></h2>
+                          <div class="row-justify">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/w2n-thumb.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                            <h5 class="spent">₹ 2.99 L</h5>
+                          </div>
+                        </div>
+                        <div class="brandCard">
+                          <h2><i class="brand-logo"><img src="./assets/images/brand8.png" alt=""></i> <span>Ikea</span></h2>
+                          <div class="row-justify">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/toi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/eenadu.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/dinathanthi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                            <h5 class="spent">₹ 7.01 L</h5>
+                          </div>
+                        </div>
+                        <div class="brandCard">
+                          <h2><i class="brand-logo"><img src="./assets/images/brand9.png" alt=""></i> <span>Titan</span></h2>
+                          <div class="row-justify">
+                            <div class="platforms">
+                              <img
+                                src="./assets/images/toi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/eenadu.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                              <img
+                                src="./assets/images/dinathanthi.png"
+                                alt=""
+                                class="platform-icon"
+                              />
+                            </div>
+                            <h5 class="spent">₹ 30.00 L</h5>
+                          </div>
+                        </div> 
+                      </div>
+                      <div class="dayCards">
+                        <div class="showDate">
+                          <span>Friday - 25th July, 2025</span> <i class="w2n"><em>5</em></i> <i class="oth"><em>10</em></i>
                         </div>
                         <div class="brandCard">
                           <h2><i class="brand-logo"><img src="./assets/images/brand1.png" alt=""></i> <span>TVS Motors</span></h2>
@@ -2433,6 +2831,7 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/all-scripts.js"></script>
   </body>
 </html>

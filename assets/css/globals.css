@@ -2,6 +2,8 @@
    * Light mode is the default.
 */
 :root {
+    --sidebar-width: 260px;
+    --sidebar-width-collapsed: 0px;
     --bg-main: #BACAD9;
     --bg-sidebar: #E8F4FF;
     --bg-card: #ffffff;
@@ -40,6 +42,7 @@
     --smooth-animation: all .5s ease;
     --bg-input-group: #fff;
     --btn-color-blue: #0239c4;
+    --btn-primary-bg: #0055F2;
     --notify-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
     --toggle-arrow: #e0a607;
     --active-txt-color: #0576CC;
@@ -99,8 +102,8 @@ body.dark-mode {
     --tr-hover-bg: #415C71;
     --brand-card-bg: #313131;
     --brand-card-border: rgba(255, 255, 255, .2);
-    --brand-card-bg-w2n-present: #79966f;
-    --brand-card-border-w2n-present: #8fad85;
+    --brand-card-bg-w2n-present: #32402d;
+    --brand-card-border-w2n-present: #516849;
 
 }
 
@@ -712,7 +715,7 @@ button.btn-gradient:hover {
 
 /* --- LEFT SIDE NAVIGATION */
 .sidebar {
-    width: 260px;
+    width: var(--sidebar-width);
     flex-shrink: 0;
     background-color: var(--bg-sidebar);
     height: calc(100vh - var(--header-height));
@@ -726,7 +729,7 @@ button.btn-gradient:hover {
 }
 
 .sidebar.collapsed {
-    width: 0;
+    width: var(--sidebar-width-collapsed);
     overflow: hidden;
     visibility: hidden;
     opacity: 0;
