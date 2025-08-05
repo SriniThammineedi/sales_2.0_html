@@ -23,4 +23,19 @@ https://codepen.io/jh3y/pen/wvNpQJe
 Fire notification animation
 https://codepen.io/AlikinVV/pen/wOyGNJ
 
+Animated Logout Button
+https://codepen.io/coopergoeke/pen/KKzrgOQ
+
+
+
+
+
+
+
+
+
+
+
+
+
 

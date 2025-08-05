@@ -328,3 +328,19 @@ $(document).ready(function () {
       prevEl: ".swiper-button-prev",
     },
   });
+
+
+// Add active class to buttons
+document.querySelectorAll(".usr-list button").forEach((button) => {
+  button.addEventListener("click", () => {
+    const isActive = button.classList.toggle("active");
+    
+    const existingIcon = button.querySelector("i");
+    if (existingIcon) existingIcon.remove();
+
+    if (isActive) {
+      const icon = document.createElement("i");
+      button.appendChild(icon);
+    }
+  });
+});

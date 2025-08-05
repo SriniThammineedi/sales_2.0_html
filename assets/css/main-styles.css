@@ -1445,6 +1445,10 @@ body.dark-mode .spent-value {
     gap: .5rem;
 }
 
+body.dark-mode .pageHead h2 img {
+    filter: invert(1);
+}
+
 .pageHead .pageActions {
     margin-left: auto;
     display: flex;
@@ -1488,8 +1492,8 @@ body.dark-mode .spent-value {
     position: absolute;
     width: 15px;
     height: 15px;
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, .4);
+    background-color: var(--bg-card);
+    border: 1px solid var(--switch-border-color);
     border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
@@ -1555,7 +1559,7 @@ body.dark-mode .spent-value {
     margin: 0 auto;
     height: calc(100vh - 100px);
     overflow-y: auto;
-    background-color: #fff;
+    background-color: var(--bg-card);
     border-radius: 16px 16px 0 0;
     position: relative;
     display: flex;
@@ -1571,11 +1575,11 @@ body.dark-mode .spent-value {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background-color: #fff;
+    background-color: var(--bg-card);
     position: relative;
     z-index: 2;
     gap: .75rem;
-    border-bottom: 1px solid #E8E8E8;
+    border-bottom: 1px solid var(--switch-border-color);
 }
 
 .view-container .viewHeader h5.headLabel {
@@ -1617,28 +1621,41 @@ ul.tabs button,
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #F9F9F9;
+    background-color: var(--bg-input-group);
     border-radius: 24px;
     padding: .65rem 1.2rem;
     line-height: 1.2;
     font-size: 14px;
     font-weight: 500;
-    color: #3F4B5A;
-    border: none;
+    color: var(--text-primary);
+    border: 1px solid var(--bg-light-gray);
     cursor: pointer;
     position: relative;
     gap: .5rem;
 }
 
 .view-container .viewHeader button.header-btn:hover {
-    background-color: #f7e478;
+    background: var(--btn-gradient-hover);
+    color: #fff;
 }
 
 .view-container .viewHeader button.active,
 .view-container .viewHeader button.active:hover {
-    background-color: #061527;
+    background-color: var(--stats-bg);
     color: #fff;
     font-weight: 500;
+}
+
+body.dark-mode .view-container .viewHeader button.active,
+body.dark-mode .view-container .viewHeader button.active:hover {
+    background-color: var(--stats-bg);
+    border-color: var(--active-txt-color);
+    color: #fff;
+}
+
+body.dark-mode .view-container .viewHeader button:hover {
+    background-color: var(--parrot-color);
+    color: var(--text-light);
 }
 
 .view-container .viewHeader button.header-btn span.close {
@@ -1775,11 +1792,10 @@ ul.tabs button em {
 }
 
 .view-container .viewBody .calendar-header {
-    background-color: #D7E1EF;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background-color: var(--thead-tr-bg);
+    padding: .85rem 0;
     position: sticky;
+    left: 0;
     top: 0;
     width: 100%;
     z-index: 5;
@@ -1788,7 +1804,7 @@ ul.tabs button em {
 .view-container .viewBody .calendar-header h6 {
     font-size: 12px;
     font-weight: 500;
-    color: #3F4B5A;
+    color: var(--text-secondary);
     padding: 0 1.5rem;
     width: 100%;
     max-width: 210px;
@@ -1866,20 +1882,24 @@ ul.tabs button em {
     background-color: #fd6f6f;
 }
 
+.view-container .like-row {
+    display: grid;
+    /* Equally shared width */
+    grid-template-columns: repeat(7, 1fr);
+    /* Dynamic Columns Based On Content */
+    /* grid-template-columns: repeat(7, minmax(300px, max-content)); */
+}
+
+.view-container .like-row>div {
+    padding: 0 1.5rem;
+}
+
 .view-container .viewBody .clientList {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
     width: 100%;
 }
 
 .view-container .viewBody .clientList .clientDetails {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    border-bottom: 10px solid #D7E1EF;
+    border-bottom: 1px solid var(--switch-border-color);
     position: relative;
     transition: all .3s ease-in-out;
     width: 100%;
@@ -1887,8 +1907,7 @@ ul.tabs button em {
 }
 
 .view-container .viewBody .clientList .clientDetails:hover {
-    background-color: #e3f8fd;
-    box-shadow: 0 3px 6px rgba(20, 141, 255, .05);
+    background-color: var(--tr-hover-bg);
     cursor: pointer;
     z-index: 3;
 }
@@ -2478,6 +2497,7 @@ button.history-btn:hover {
 /* Modal PopUp Local Styles */
 .modal.show {
     display: flex !important;
+    background-color: var(--modal-overlay-bg) !important;
 }
 
 .modal-dialog {
@@ -2529,6 +2549,8 @@ button.history-btn:hover {
 .modal-header,
 .modal-footer {
     width: 100%;
+    border-color: var(--switch-border-color);
+    gap: .6rem;
 }
 
 .modal-header {
@@ -2540,8 +2562,8 @@ button.history-btn:hover {
 
 .modal-header .btn-modal-close {
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     background: url(../images/close-red-big.svg) no-repeat center center;
     background-size: contain;
     text-indent: -999rem;
@@ -2569,9 +2591,13 @@ button.history-btn:hover {
     list-style: none;
     gap: .25rem;
     width: fit-content;
-    background-color: #E4FFEC;
+    background-color: var(--brand-card-bg-w2n-present);
     border-radius: 30px;
     padding: 0;
+}
+
+body.dark-mode .levelMenu {
+    background-color: var(--tr-hover-bg);
 }
 
 .levelMenu li {
@@ -2621,6 +2647,24 @@ button.history-btn:hover {
     background-color: #3AA20A;
 }
 
+body.dark-mode .levelMenu li.active,
+body.dark-mode .levelMenu li.active:hover {
+    background: var(--btn-primary-bg);
+    color: #F3F3F3;
+}
+
+body.dark-mode .levelMenu li.active .ico {
+    background-color: var(--list-active-bg);
+}
+
+body.dark-mode .levelMenu li .ico {
+    background-color: var(--brown-berry);
+}
+
+body.dark-mode .levelMenu li {
+    color: var(--text-light);
+}
+
 .levelMenu li.active .ico img {
     filter: invert(1) brightness(10);
 }
@@ -2668,20 +2712,27 @@ button.history-btn:hover {
     position: relative;
     padding: 1.25rem 1.25rem 1.25rem 1.65rem;
     width: 100%;
-    gap: .65rem;
+    gap: .85rem;
+}
+
+.listings-order .usr-list.active {
+    border-color: var(--btn-color-blue);
+    background-color: var(--list-active-bg);
+    outline: 1px solid var(--btn-color-blue);
 }
 
 .listings-order .usr-list label {
     position: absolute;
     top: .6rem;
     left: -1rem;
-    background-color: var(--bg-card);
+    background-color: var(--brand-card-bg);
     border: 1px solid var(--switch-border-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: .25rem .5rem;
-    border-radius: var(--border-radius-small);
+    width: 32px;
+    height: 32px;
+    border-radius: var(--border-radius-huge);
     font-size: 12px;
     color: var(--text-primary);
     text-transform: uppercase;
@@ -2698,12 +2749,17 @@ button.history-btn:hover {
     border: none;
     border-radius: var(--border-radius-medium);
     position: relative;
-    padding: .5rem .85rem;
+    padding: .6rem .85rem;
     background-size: 400%;
     z-index: 1;
 }
 
-.listings-order .usr-list button:hover {
+.listings-order .usr-list.active button {
+    background-color: var(--bg-card);
+}
+
+.listings-order .usr-list button:hover,
+.listings-order .usr-list button.active {
     animation: animate 5s linear infinite;
     color: var(--text-light);
 }
@@ -2718,22 +2774,31 @@ button.history-btn:hover {
     }
 }
 
-.listings-order .usr-list button::before {
+.listings-order .usr-list button::before,
+.listings-order .usr-list button.active::before {
     content: "";
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: linear-gradient(90deg, #1760b3, #f34d24, #1fa71b, #1760b3);
+    background: linear-gradient(90deg, #0587d3, #ca8c06, #d48020, #0bb945, #0587d3);
     background-size: 400%;
     border-radius: 40px;
     opacity: 0;
-    transition: .5s;
+    transition: .1s;
 }
 
-.listings-order .usr-list button:hover::before {
-    /* filter: blur(20px); */
+.listings-order .usr-list button:hover::before,
+.listings-order .usr-list button.active::before {
     opacity: 1;
     animation: animate 5s linear infinite;
+}
+
+.listings-order .usr-list button i {
+    width: 20px;
+    height: 20px;
+    background: url(../images/remove-cross.svg) no-repeat center center;
+    background-size: contain;
+    margin-left: 10px;
 }
 
 /* Responsive table */

@@ -2,6 +2,12 @@
    * Light mode is the default.
 */
 :root {
+    /* Cutting Edge Button */
+    --btn-height: 48px;
+    --btn-radius: 8px;
+    --cut-size: 12px;
+
+    /* Colors */
     --sidebar-width: 260px;
     --sidebar-width-collapsed: 0px;
     --bg-main: #BACAD9;
@@ -59,6 +65,12 @@
     --brand-card-border: #DADADA;
     --brand-card-bg-w2n-present: #E6FFDD;
     --brand-card-border-w2n-present: #CBF5BD;
+    --list-active-bg: rgba(123, 142, 159, .35);
+    --modal-overlay-bg: rgba(0, 0, 0, .35);
+    --btn-primary-bg: #0038FF;
+    --btn-clear-bg: #E9EAF0;
+    --btn-danger-bg: #FA3B01;
+    --btn-secondary-bg: #3BAA00;
 }
 
 body.dark-mode {
@@ -104,7 +116,7 @@ body.dark-mode {
     --brand-card-border: rgba(255, 255, 255, .2);
     --brand-card-bg-w2n-present: #32402d;
     --brand-card-border-w2n-present: #516849;
-
+    --modal-overlay-bg: rgba(255, 255, 255, .5)
 }
 
 /* --- Global Reset --- */
@@ -1345,4 +1357,85 @@ body.dark-mode .accordion-button::after {
     box-sizing: border-box;
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
+}
+
+body.dark-mode .progress-wrap svg.progress-circle path {
+    stroke: #ff3300;
+}
+
+body.dark-mode .progress-wrap.active-progress {
+    background-color: #000;
+}
+
+body.dark-mode .progress-wrap::after {
+    color: #fff;
+}
+
+/* Cutting Edge Button */
+.btn-skewed {
+    --bg: #007bff;
+    --color: #fff;
+    --padding: .65rem 1.25rem;
+    --radius: 8px;
+    --skew-size: 16px;
+
+    display: inline-block;
+    color: var(--color);
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.btn-skewed .content {
+    padding: var(--padding);
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    gap: .5rem;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--skew-size)), calc(100% - var(--skew-size)) 100%, 0 100%);
+    transition: all .3s ease-in-out;
+}
+
+.btn-skewed.btn-primary,
+.btn-skewed.btn-clear,
+.btn-skewed.btn-secondary,
+.btn-skewed.btn-danger {
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+.btn-skewed.btn-primary .content {
+    background-color: var(--btn-primary-bg);
+    color: var(--text-light);
+}
+
+.btn-skewed:hover .content {
+    cursor: pointer;
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, .25);
+}
+
+.btn-skewed.btn-clear .content {
+    background-color: var(--btn-clear-bg);
+    color: var(--stats-bg);
+}
+
+.btn-skewed.btn-secondary .content {
+    background-color: var(--btn-secondary-bg);
+    color: var(--text-light);
+}
+
+.btn-skewed.btn-danger .content {
+    background-color: var(--btn-danger-bg);
+    color: var(--text-light);
 }
