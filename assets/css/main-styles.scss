@@ -1817,10 +1817,52 @@ ul.tabs button em {
     grid-template-columns: repeat(7, 1fr);
     /* Dynamic Columns Based On Content */
     /* grid-template-columns: repeat(7, minmax(300px, max-content)); */
+
+    .int-actions{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: .15rem;
+
+        button{
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0;
+            color: transparent;
+            cursor: pointer;
+            border: none;
+
+            &#add-poc{
+                background: #67A403 url(../images/int-poc.svg) no-repeat center center;
+                background-size: 18px 18px;
+            }
+            &#add-interaction{
+                background: #324997 url(../images/call-light.svg) no-repeat center center;
+                background-size: 16px 16px;
+            }
+            &#add-reminder{
+                background: #B15F3C url(../images/int-reminder.svg) no-repeat center center;
+                background-size: 16px 16px;
+            }
+            &#add-competitor{
+                background: #46AA9F url(../images/int-bell-light.svg) no-repeat center center;
+                background-size: 16px 16px;
+            }
+            &#see-history{
+                background: #98669D url(../images/int-history.svg) no-repeat center center;
+                background-size: 16px 16px;
+            }
+        }
+    }
 }
 
 .view-container .like-row>div {
-    padding: .35rem 1.5rem;
+    padding: .5rem 1.5rem;
     min-width: 160px;
 }
 
@@ -1833,6 +1875,13 @@ ul.tabs button em {
     align-items: center;
     justify-content: flex-start;
     gap: .25rem;
+
+    p{
+        font-size: 13px;
+        color: var(--text-secondary);
+        line-height: 1.3;
+        font-weight: 500;
+    }
 }
 
 .view-container .like-row .slNo{
@@ -1913,12 +1962,66 @@ ul.tabs button em {
     gap: .35rem;
 }
 
-.view-container .like-row .column .days-ago {
+.view-container .like-row .column .days-ago, .view-container .like-row .column.status label {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .25rem .5rem;
+    background-color: #FFEEE8;
+    border-radius: 6px;
+    color: #FF6636;
+    gap: .35rem;
+
+    i.calendar{
+        width: 16px;
+        height: 16px;
+        background: url(../images/clock-orange.svg) no-repeat center center;
+        background-size: contain;
+    }
+
+    &.success{
+        color: #30AF29;
+        background-color: #DBFFE1;
+
+        i{
+            width: 16px;
+            height: 16px;
+            background: url(../images/hand-shake-green.svg) no-repeat center center;
+            background-size: contain;
+        }
+    }
+
+    &.failed {
+        i{
+            width: 16px;
+            height: 16px;
+            background: url(../images/sad-face.svg) no-repeat center center;
+            background-size: contain;
+        }
+    }
 }
 
 .view-container .viewBody .clientList {
     width: 100%;
+}
+
+.view-container .like-row .last-active{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: .25rem;
+
+    .days-ago {
+        font-size: 13px;
+        color: var(--text-secondary);
+        background-color: transparent;
+
+        & img {
+            max-width: 16px;
+            height: auto;
+        }
+    }
 }
 
 .view-container .viewBody .clientList .clientDetails {
@@ -1930,9 +2033,13 @@ ul.tabs button em {
 }
 
 .view-container .viewBody .clientList .clientDetails:hover {
-    background-color: var(--tr-hover-bg);
+    background-color: var(--list-active-bg);
     cursor: pointer;
     z-index: 3;
+
+    .slNo .title h1 {
+        color: var(--link-hover-color);
+    }
 }
 
 .view-container .viewBody .clientList .clientDetails .mainRow {
@@ -2149,15 +2256,15 @@ ul.tabs button em {
     height: 0;
     opacity: 0;
     visibility: hidden;
-    display: none;
     overflow: hidden;
     transition: max-height 1s ease-in-out;
+    z-index: -1;
 }
 
 #toggleContent.show {
     position: relative;
     height: auto;
-    top: -10px;
+    top: 0;
     width: 100%;
     padding: 2rem 1.5rem;
     background-color: #003E6D;
@@ -2171,6 +2278,7 @@ ul.tabs button em {
     opacity: 1;
     color: #fff;
     gap: 1rem;
+    z-index: 1;
 }
 
 #toggleContent .title {
@@ -2823,6 +2931,91 @@ body.dark-mode .levelMenu li {
     background-size: contain;
     margin-left: 10px;
 }
+
+
+
+// Toggle div from right
+#sidePanel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: fit-content;
+    height: 100vh;
+    background: rgba(0, 0, 0, .6);
+    box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+    transition: right .5s ease-in-out;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 2rem;
+
+    &.active {
+        right: 0;
+    }
+
+    .int-outer{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        background-color: var(--bg-card);
+        border-radius: var(--border-radius-small);
+        height: auto;
+        max-height: 90vh;
+        min-width: 390px;
+        overflow: hidden;
+        z-index: 1;
+
+        .int-head{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: .7rem 1rem;
+            border-bottom: 1px solid var(--switch-border-color);
+            width: 100%;
+
+            h3{
+                font-size: 18px;
+                font-weight: 500;
+                color: var(--text-primary);
+            }
+
+            #closeBtn{
+                width: 30px;
+                height: 30px;
+                background: url(../images/close-red.svg) no-repeat center center;
+                background-size: contain;
+                cursor: pointer;
+                border-radius: 50%;
+                font-size: 0;
+                color: transparent;
+            }
+        }
+        .int-body{
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            padding: 1rem 1.5rem;
+            box-sizing: border-box;
+            overflow-y: auto;
+            height: 100%;
+        }
+
+        .int-footer{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border-top: 1px solid var(--switch-border-color);
+        }
+    }
+}
+
+
 
 /* Responsive table */
 @media all and (max-width: 640px) {

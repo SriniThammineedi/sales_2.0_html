@@ -836,8 +836,8 @@
                                 <p>Discussed about regular campaigns and future ad plans</p>
                             </div>
                             <div class="column status">
-                                <label class="status">
-                                  <i class="unhappy"></i>
+                                <label class="failed">
+                                  <i></i>
                                   <span>No visibility yet</span>
                                 </label>
                             </div>
@@ -852,11 +852,11 @@
                                 </label>
                             </div>
                             <div class="column int-actions">
-                                <button class="add-poc">Add POC</button>
-                                <button class="add-interaction">Add Interaction</button>
-                                <button class="add-reminder">Add Reminder</button>
-                                <button class="add-competitor">Add Competitor Campaign</button>
-                                <button class="see-history">See History</button>
+                                <button id="add-poc">Add POC</button>
+                                <button id="add-interaction">Add Interaction</button>
+                                <button id="add-reminder">Add Reminder</button>
+                                <button id="add-competitor">Add Competitor Campaign</button>
+                                <button id="see-history">See History</button>
                             </div>
                         </div>
 
@@ -1174,6 +1174,18 @@
         </div>
       </div>
     </div><!-- Modal PopUp End -->
+
+    <!-- Panel from Right -->
+     <div class="aside-right" id="sidePanel">
+      <div class="int-outer">
+        <div class="int-head">
+          <h3>Record Interactions</h3>
+          <button class="close-btn" id="closeBtn">Close</button>
+        </div>
+        <div class="int-body"></div>
+        <div class="int-footer"></div>
+      </div>
+     </div>
 
     <!-- All Scripts-->
     <script src="./assets/js/jquery.min.js"></script>
