@@ -1,0 +1,50 @@
+// Flex Row Start
+@mixin flex-row-start {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  width: fit-content;
+}
+
+// Flex Centered
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Flex Centered Start
+@mixin flex-centered-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+// Flex Column Center
+@mixin flex-col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+// Flex Column Start
+@mixin flex-col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+// Responsive Flex Row that becomes column on mobile
+@mixin flex-row-responsive {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}

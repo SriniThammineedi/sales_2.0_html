@@ -1,4 +1,4 @@
-@import './globals.css';
+@import url("./globals.css");
 body {
   font-family: "Clash Display", sans-serif;
   background-color: var(--bg-main);
@@ -17,20 +17,23 @@ body {
   padding: 0;
   margin-bottom: 20px;
 }
-.collapsible-stats-section .collapsible-content {
+
+.collapsible-content {
   overflow: hidden;
   transition: all 0.5s ease-in-out;
   max-height: 1000px;
   opacity: 1;
 }
-.collapsible-stats-section .collapsible-content .collapsed {
+
+.collapsible-content.collapsed {
   max-height: 0;
   opacity: 0;
   position: relative;
   margin-top: -15px;
   border-radius: 0 0 var(--border-radius-huge) var(--border-radius-huge);
 }
-.collapsible-stats-section .collapsible-content .stats-grid {
+
+.stats-grid {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -42,12 +45,17 @@ body {
   position: relative;
   z-index: 2;
 }
-.collapsible-stats-section .collapsible-content .stats-grid .devider {
+
+.stats-grid .devider {
   width: 1px;
   height: 50px;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.05));
 }
-.collapsible-stats-section .collapsible-content .stats-grid .devider:nth-child(2), .collapsible-stats-section .collapsible-content .stats-grid .devider:nth-child(4), .collapsible-stats-section .collapsible-content .stats-grid .devider:nth-child(6), .collapsible-stats-section .collapsible-content .stats-grid .devider:nth-child(8) {
+
+.stats-grid .devider:nth-child(2),
+.stats-grid .devider:nth-child(4),
+.stats-grid .devider:nth-child(6),
+.stats-grid .devider:nth-child(8) {
   margin: 0 0.75%;
 }
 
@@ -2817,4 +2825,4 @@ body.dark-mode .levelMenu li {
   .dashboard-brands .column:last-child:before {
     content: "";
   }
-}/*# sourceMappingURL=main-styles.css.map */
+}/*# sourceMappingURL=main-styles_BackUp.css.map */
