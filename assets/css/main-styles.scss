@@ -1630,6 +1630,7 @@ ul.tabs button,
     font-weight: 500;
     color: var(--text-primary);
     border: 1px solid var(--bg-light-gray);
+    transition: all .2s ease-in-out;
     cursor: pointer;
     position: relative;
     gap: .5rem;
@@ -1862,7 +1863,7 @@ ul.tabs button em {
 }
 
 .view-container .like-row>div {
-    padding: .5rem 1.5rem;
+    padding: .85rem 1.5rem;
     min-width: 160px;
 }
 
@@ -1882,10 +1883,16 @@ ul.tabs button em {
         line-height: 1.3;
         font-weight: 500;
     }
+
+    p.nodata{
+        font-size: 13px;
+        color: var(--text-secondary);
+        opacity: .5;
+    }
 }
 
 .view-container .like-row .slNo{
-    @include flex-centered-start;
+    @include flex-row-cent-start;
 
     span {
         font-size: 14px;
@@ -1904,9 +1911,10 @@ ul.tabs button em {
     gap: .25rem;
     
         h1 {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 500;
             color: var(--active-txt-color);
+            letter-spacing: .02rem;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
@@ -1921,23 +1929,23 @@ ul.tabs button em {
             justify-content: flex-start;
             gap: .35rem;
 
-                span.category {
-                    background-color: #B8E8E2;
-                    color: #068878;
-                    border-radius: 16px;
-                    font-size: 12px;
-                    line-height: 100%;
-                    padding: .25rem .5rem;
-                }
+            span.category {
+                background-color: #B8E8E2;
+                color: #068878;
+                border-radius: 16px;
+                font-size: 12px;
+                line-height: 100%;
+                padding: .25rem .5rem;
+            }
 
-                span.date {
-                    background-color: #EAEAEA;
-                    color: var(--text-primary);
-                    border-radius: 16px;
-                    font-size: 12px;
-                    line-height: 100%;
-                    padding: .25rem .5rem;
-                }
+            span.date {
+                background-color: #EAEAEA;
+                color: var(--text-primary);
+                border-radius: 16px;
+                font-size: 12px;
+                line-height: 100%;
+                padding: .25rem .5rem;
+            }
         }
     }
 }
@@ -1951,12 +1959,12 @@ ul.tabs button em {
 }
 
 .view-container .like-row .column .poc-num h4 {
-    font-size: 18px;
-    color: var(--text-secondary);
+    font-size: 16px;
+    color: var(--text-primary);
 }
 
 .view-container .like-row .column .poc-num .contact {
-    @include flex-centered-start;
+    @include flex-row-cent-start;
     color: var(--text-primary);
     font-size: 13px;
     gap: .35rem;
@@ -2008,7 +2016,7 @@ ul.tabs button em {
 .view-container .like-row .last-active{
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: column;
     gap: .25rem;
 
@@ -2266,8 +2274,8 @@ ul.tabs button em {
     height: auto;
     top: 0;
     width: 100%;
-    padding: 2rem 1.5rem;
-    background-color: #003E6D;
+    padding: 1rem 1.5rem 1.5rem;
+    background-color: #7B8E9F;
     max-height: 800px;
     overflow-y: auto;
     display: flex;
@@ -2286,6 +2294,7 @@ ul.tabs button em {
     font-weight: 400;
     display: flex;
     align-items: center;
+    font-size: 16px;
     justify-content: flex-start;
     gap: .5rem;
 }
@@ -2412,6 +2421,7 @@ ul.tabs button em {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    height: 100%;
     padding: .75rem 1rem;
     font-size: 14px;
     color: #3F4B5A;
@@ -2433,6 +2443,7 @@ ul.tabs button em {
     align-items: center;
     justify-content: flex-start;
     color: #808FA3;
+    font-size: 13px;
     font-weight: 400;
     gap: .35rem;
 }
@@ -2442,8 +2453,20 @@ ul.tabs button em {
     align-items: center;
     justify-content: flex-end;
     color: #808FA3;
+    font-size: 12px;
     font-weight: 400;
     gap: .35rem;
+}
+
+.stack-inline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.mobileOnly {
+    display: none;
 }
 
 /* Effort Analysis Calendar View Footer */
@@ -2533,7 +2556,7 @@ ul.tabs button em {
 
 button.history-btn {
     position: relative;
-    background-color: #0576CC;
+    background: var(--btn-gradient-orange);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2541,52 +2564,21 @@ button.history-btn {
     color: #fff;
     border: none;
     padding: .5rem .75rem;
+    transition: all .2s ease-in-out;
     white-space: nowrap;
     font-size: 13px;
     border-radius: 6px;
 }
 
 button.history-btn:hover {
-    background-color: #047dda;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
 }
 
-.view-container .viewFooter button.history-btn {
-    position: relative;
-    top: inherit;
-    right: inherit;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: .5rem;
+button.history-btn img{
+    filter: brightness(2);
 }
 
-.view-container .viewFooter button.history-btn img {
-    filter: invert(1) brightness(10);
-    width: 32px;
-}
-
-.view-container .viewFooter button.history-btn span {
-    font-size: 15px;
-    text-align: left;
-    line-height: 1.5;
-}
-
-.view-container .viewFooter .stats {
-    display: flex;
-    flex-direction: column;
-    gap: .6rem;
-}
-
-.view-container .viewFooter .stats h6 {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.5;
-    color: #6E7886;
-    max-width: 100px;
-    min-height: 45px;
-}
-
-.view-container .viewFooter ul.client-navigator {
+ul.client-navigator {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2598,13 +2590,13 @@ button.history-btn:hover {
     position: absolute;
     gap: .05rem;
     left: 50%;
-    top: -15px;
+    bottom: 10px;
     transform: translateX(-50%);
     box-shadow: 4px 5px 10px rgba(14, 105, 141, .1);
     z-index: 5;
 }
 
-.view-container .viewFooter ul.client-navigator li {
+ul.client-navigator li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2619,8 +2611,8 @@ button.history-btn:hover {
     cursor: pointer;
 }
 
-.view-container .viewFooter ul.client-navigator li:hover,
-.view-container .viewFooter ul.client-navigator li.active {
+ul.client-navigator li:hover,
+ul.client-navigator li.active {
     background-color: #C6FF1D;
     color: #3b444e;
 }
@@ -2965,7 +2957,7 @@ body.dark-mode .levelMenu li {
         border-radius: var(--border-radius-small);
         height: auto;
         max-height: 90vh;
-        min-width: 390px;
+        max-width: 400px;
         overflow: hidden;
         z-index: 1;
 
@@ -2973,7 +2965,7 @@ body.dark-mode .levelMenu li {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: .7rem 1rem;
+            padding: .7rem 1.5rem;
             border-bottom: 1px solid var(--switch-border-color);
             width: 100%;
 
@@ -2994,7 +2986,8 @@ body.dark-mode .levelMenu li {
                 color: transparent;
             }
         }
-        .int-body{
+
+        .int-body {
             width: 100%;
             height: 100%;
             overflow-y: auto;
@@ -3002,6 +2995,67 @@ body.dark-mode .levelMenu li {
             box-sizing: border-box;
             overflow-y: auto;
             height: 100%;
+
+            .d-flex-col-start {
+                @include flex-col-start;
+
+                h6{
+                    font-size: 13px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    color: var(--text-primary);
+                    padding: .5rem 0;
+                }
+
+                .radioGrp {
+                    @include flex-row-cent-start;
+                    flex-wrap: wrap;
+                    gap: .65rem;
+
+                    .radioSet {
+                        @include flex-row-cent-start;
+                        position: relative;
+
+                        input[type="radio"] {
+                            opacity: 0;
+                            position: absolute;
+                            inset: 0;
+                            cursor: pointer;
+                            z-index: 1;
+
+                            &:checked + label {
+                                background-color: var(--stats-bg);
+                                color: var(--text-light);
+                                border-color: var(--stats-bg);
+
+                                img{
+                                    filter: none;
+                                }
+                            }
+                        }
+
+                        label{
+                            display: flex;
+                            align-items: center;
+                            font-size: 12px;
+                            letter-spacing: .01rem;
+                            color: var(--text-primary);
+                            padding: .35rem .7rem;
+                            font-weight: 500;
+                            text-transform: uppercase;
+                            background-color: var(--bg-card);
+                            border-radius: var(--border-radius-medium);
+                            border: 2px solid var(--switch-border-color);
+                            gap: .35rem;
+
+                            img{
+                                filter: invert(1);
+                                width: 16px;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         .int-footer{
@@ -3014,6 +3068,8 @@ body.dark-mode .levelMenu li {
         }
     }
 }
+
+
 
 
 

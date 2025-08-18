@@ -46,6 +46,7 @@
     --btn-notify: #5F93BA;
     --btn-gradient: linear-gradient(45deg, #F48F01 0%, #1450E6 100%);
     --btn-gradient-hover: linear-gradient(45deg, #f45a01 0%, #0239c4 100%);
+    --btn-gradient-orange: linear-gradient(to right, #FF512F 0%, #F09819 100%);
     --smooth-animation: all .5s ease;
     --bg-input-group: #fff;
     --btn-color-blue: #0239c4;
