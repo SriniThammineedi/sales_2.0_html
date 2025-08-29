@@ -194,7 +194,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="nav-link">
+                    <a href="effort-analysis.html" class="nav-link">
                       <i class="icon effort-analysis"></i>
                       Effort Analysis
                     </a>
@@ -2071,33 +2071,96 @@
           <button class="close-btn" id="closeBtn">Close</button>
         </div>
         <div class="int-body">
-          <div class="d-flex-col-start radio-container">
+          <div class="d-flex-col-start">
             <h6>Choose Interaction Type</h6>
             <div class="radioGrp">
-              <div class="radioSet">
+              <div class="radioSelector">
                 <input type="radio" id="dm" name="interaction" value="Direct Meeting" checked />
                 <label for="dm"><img src="./assets/images/hand-shake-icon.svg" alt=""> <span>Direct Meeting</span></label>
               </div>
-              <div class="radioSet">
+              <div class="radioSelector">
                 <input type="radio" id="vm" name="interaction" value="Virtual Meeting" />
                 <label for="vm"><img src="./assets/images/virtual-meeting.svg" alt=""> <span>Virtual Meeting</span></label>
               </div>
-              <div class="radioSet">
+              <div class="radioSelector">
                 <input type="radio" id="call" name="interaction" value="Call" />
                 <label for="call"><img src="./assets/images/phone-call.svg" alt=""> <span>Call</span></label>
               </div>
-              <div class="radioSet">
+              <div class="radioSelector">
                 <input type="radio" id="whatsapp" name="interaction" value="WhatsApp" />
                 <label for="whatsapp"><img src="./assets/images/whatsapp.svg" alt=""> <span>WhatsApp</span></label>
               </div>
-              <div class="radioSet">
+              <div class="radioSelector">
                 <input type="radio" id="email" name="interaction" value="Email" />
                 <label for="email"><img src="./assets/images/email.svg" alt=""> <span>Email</span></label>
               </div>
             </div>
           </div>
+          <div class="d-flex-col-start">
+            <h6>With Whoom</h6>
+            <div class="selector">
+              <select>
+                <option value="" selected>Please Choose</option>
+                <option value="person1">Person 1</option>
+                <option value="person2">Person 2</option>
+                <option value="person3">Person 3</option>
+              </select>
+            </div>
+          </div>
+          <div class="d-flex-col-start">
+            <h6>Description</h6>
+            <textarea name="description" id="description" placeholder="Enter description here..."></textarea>
+          </div>          
+          <div class="d-flex-col-start">
+            <h6>W2N Campaign Visibility Status</h6>
+            <div class="radioGrp">
+              <div class="radioBtn">
+                <input type="radio" id="one-week" name="visibility" value="In 1 week" checked />
+                <label for="one-week">In 1 Week</label>
+              </div>
+              <div class="radioBtn">
+                <input type="radio" id="two-weeks" name="visibility" value="In 2 weeks" />
+                <label for="two-weeks">In 2 Weeks</label>
+              </div>
+              <div class="radioBtn">
+                <input type="radio" id="three-weeks" name="visibility" value="In 3 weeks" />
+                <label for="three-weeks">In 3 Weeks</label>
+              </div>
+              <div class="radioBtn">
+                <input type="radio" id="next-month" name="visibility" value="Later next month" />
+                <label for="next-month">Later Next Month</label>
+              </div>
+              <div class="radioBtn">
+                <input type="radio" id="two-months" name="visibility" value="After 2 months" />
+                <label for="two-months">After 2 Months</label>
+              </div>
+              <div class="radioBtn">
+                <input type="radio" id="camp-received" name="visibility" value="Campaign received" />
+                <label for="camp-received">Campaign Received</label>
+              </div>
+              <div class="radioBtn">
+                <input type="radio" id="not-interested" name="visibility" value="Not interested" />
+                <label for="not-interested">Not Interested</label>
+              </div>
+              <div class="radioBtn">
+                <input type="radio" id="no-visibility" name="visibility" value="No visibility yet" />
+                <label for="no-visibility">No Visibility Yet</label>
+              </div>
+            </div>
+          </div>          
+          <div class="d-flex-col-start">
+            <h6>Possible Campaign Outlay</h6>
+            <input type="text" name="campaign-outlay" id="campaign-outlay" placeholder="Enter campaign outlay">
+          </div>
         </div>
-        <div class="int-footer"></div>
+        <div class="int-footer">
+          <button type="button" class="btn-clear">
+              <img src="./assets/images/cancel-cross.svg" alt=""> <span>Cancel</span>
+            </button>
+            <button type="button" class="btn-skewed btn-dark">
+              <span class="content"><img src="./assets/images/save-icon.svg" alt=""> <em>Save Details</em></span>
+            </button>
+        </div>
       </div>
     </div>
 

@@ -14,7 +14,7 @@
   justify-content: center;
 }
 
-// Flex Centered Start
+// Flex Row Centered Start
 @mixin flex-row-cent-start {
   display: flex;
   flex-direction: row;
@@ -30,12 +30,20 @@
   justify-content: center;
 }
 
-// Flex Column Start
+// Flex Column Start Center
 @mixin flex-col-start {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+}
+
+// Flex Column Start Center
+@mixin flex-col-start-all {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 // Responsive Flex Row that becomes column on mobile

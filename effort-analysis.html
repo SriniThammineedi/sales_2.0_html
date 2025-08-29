@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Way2News Sales Panel | Effort Analysis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fontawesome Icons Kit -->
+    <script
+      src="https://kit.fontawesome.com/75b0afa4e1.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Theme Style Sheet -->
+    <link rel="stylesheet" href="./assets/css/main-styles.css" />
+  </head>
+
+  <body>
+    <!-- TOP STICKY HEADER -->
+    <header class="top-sticky-header">
+      <div class="logo">
+        <img src="./assets/images/w2n-logo.svg" alt="Way2News" />
+        <button id="sidebarToggle">
+          <img src="./assets/images/hamberger-menu.svg" alt="" />
+        </button>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search here..." />
+        <button class="searchBtn">
+          <img src="./assets/images/search-icon-light.svg" alt="" />
+        </button>
+      </div>
+      <div class="header-actions">
+        <div class="cstmSelect">
+          <img src="./assets/images/hand-shake-icon.svg" alt="" />
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Sales
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#" class="dropdown-item">Sales</a></li>
+              <li><a href="#" class="dropdown-item">B2B</a></li>
+              <li><a href="#" class="dropdown-item">Finance</a></li>
+              <li><a href="#" class="dropdown-item">CST</a></li>
+              <li><a href="#" class="dropdown-item">Legal</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="head-notifications">
+          <img src="./assets/images/head-notification-bell.svg" alt="" />
+          <div class="interMenu">
+            <div id="showNotifications">
+              <div class="header">
+                <h6>Notifications<em>8</em></h6>
+                <button id="closeButton">
+                  <img src="./assets/images/close-red.svg" alt="" />
+                </button>
+              </div>
+              <div class="notifyBody">
+                <ol class="notifications">
+                  <li>
+                    <p>Your order #984926A approved by head of finance.</p>
+                    <div class="actions">
+                      <button class="btn-read">Mark As Read</button>
+                      <button class="btn-view">View Order</button>
+                    </div>
+                  </li>
+                  <li>
+                    <p>Your order #984926A approved by head of finance.</p>
+                    <div class="actions">
+                      <button class="btn-read">Mark As Read</button>
+                      <button class="btn-view">View Order</button>
+                    </div>
+                  </li>
+                  <li>
+                    <p>Your order #984926A approved by head of finance.</p>
+                    <div class="actions">
+                      <button class="btn-read">Mark As Read</button>
+                      <button class="btn-view">View Order</button>
+                    </div>
+                  </li>
+                  <li>
+                    <p>Your order #984926A approved by head of finance.</p>
+                    <div class="actions">
+                      <button class="btn-read">Mark As Read</button>
+                      <button class="btn-view">View Order</button>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+              <div class="notifyFooter">
+                <button class="btn-gradient">Show All Notifications</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="user-profile">
+          <img
+            src="./assets/images/profile-pic.png"
+            alt="User Avatar"
+            class="avatar"
+          />
+          <div class="interMenu">
+            <div id="showProfileMenu">
+              <div class="header">
+                <h6>Profile</h6>
+                <button id="closeBtn">
+                  <img src="./assets/images/close-red.svg" alt="" />
+                </button>
+              </div>
+              <div class="profileBody">
+                <a href="" target="_blank"
+                  ><i class="fa-solid fa-marker"></i>
+                  <span>Update Profile</span></a
+                >
+                <a href="" target="_blank"
+                  ><i class="fa-solid fa-lock-open"></i>
+                  <span>Change Password</span></a
+                >
+                <a href="" target="_blank"
+                  ><i class="fa-solid fa-sliders"></i>
+                  <span>Account Settings</span></a
+                >
+                <a href="" target="_blank" class="logout"
+                  ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                  <span>Logout</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="main-body">
+      <!-- LEFT SIDE NAVIGATION -->
+      <aside class="sidebar">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Growth Management
+              </button>
+            </h3>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <ul>
+                  <li>
+                    <a href="index.html" class="nav-link">
+                      <i class="icon dashboard"></i>
+                      Dashboard
+                    </a>
+                  </li>
+                  <li>
+                    <a href="account-management.html" class="nav-link"
+                      ><i class="icon acc-management"></i> Account Management
+                    </a>
+                  </li>
+                  <li>
+                    <a href="effort-analysis.html" class="nav-link active">
+                      <i class="icon effort-analysis"></i>
+                      Effort Analysis
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon market-tracker"></i>
+                      Market Tracker
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon market-share-analysis"></i>
+                      Market Share Analysis
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon sales-coverage"></i>
+                      Sales Coverage
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon my-performance"></i>
+                      My Performance
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon my-incentives"></i>
+                      My Incentives
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon contacts"></i>
+                      Contacts
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon revenue-analysis"></i>
+                      Revenue Analysis
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon team-management"></i>
+                      Team Management
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon target-achieved"></i>
+                      Target vs Achieved
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Delivery
+              </button>
+            </h3>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <ul>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon yearly-reports"></i>
+                      Yearly Reports
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon monthly-reports"></i>
+                      Monthly Reports
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon sales-reports"></i>
+                      Sales Reports
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon tickets"></i>
+                      Tickets
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon order"></i>
+                      Order
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon order-booking"></i>
+                      Order Booking
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon users"></i>
+                      Users
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon discount-approvals"></i>
+                      Discount Approvals
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon competitor-ads"></i>
+                      Competitor Ads
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon print-data"></i>
+                      Print Data
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon inventory"></i>
+                      Inventory
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link">
+                      <i class="icon discount"></i>
+                      Discount
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="theme-switcher">
+          <span>Change Theme</span>
+          <label class="switch">
+            <input
+              class="switch__input"
+              type="checkbox"
+              role="switch"
+              id="theme-switcher"
+            />
+            <svg
+              class="switch__icon switch__icon--light"
+              viewBox="0 0 12 12"
+              width="12px"
+              height="12px"
+              aria-hidden="true"
+            >
+              <g
+                fill="none"
+                stroke="#fff"
+                stroke-width="1"
+                stroke-linecap="round"
+              >
+                <circle cx="6" cy="6" r="2" />
+                <g stroke-dasharray="1.5 1.5">
+                  <polyline points="6 10,6 11.5" transform="rotate(0,6,6)" />
+                  <polyline points="6 10,6 11.5" transform="rotate(45,6,6)" />
+                  <polyline points="6 10,6 11.5" transform="rotate(90,6,6)" />
+                  <polyline points="6 10,6 11.5" transform="rotate(135,6,6)" />
+                  <polyline points="6 10,6 11.5" transform="rotate(180,6,6)" />
+                  <polyline points="6 10,6 11.5" transform="rotate(225,6,6)" />
+                  <polyline points="6 10,6 11.5" transform="rotate(270,6,6)" />
+                  <polyline points="6 10,6 11.5" transform="rotate(315,6,6)" />
+                </g>
+              </g>
+            </svg>
+            <svg
+              class="switch__icon switch__icon--dark"
+              viewBox="0 0 12 12"
+              width="12px"
+              height="12px"
+              aria-hidden="true"
+            >
+              <g
+                fill="none"
+                stroke="#fff"
+                stroke-width="1"
+                stroke-linejoin="round"
+                transform="rotate(-45,6,6)"
+              >
+                <path
+                  d="m9,10c-2.209,0-4-1.791-4-4s1.791-4,4-4c.304,0,.598.041.883.105-.995-.992-2.367-1.605-3.883-1.605C2.962.5.5,2.962.5,6s2.462,5.5,5.5,5.5c1.516,0,2.888-.613,3.883-1.605-.285.064-.578.105-.883.105Z"
+                />
+              </g>
+            </svg>
+            <span class="switch__sr">Dark Mode</span>
+          </label>
+        </div>
+      </aside>
+      <!-- MAIN CONTENT AREA -->
+      <main class="main-content effort-bg">
+        <!-- STATS ROW WITH REMINDERS (COLLAPSIBLE) -->
+        <section class="collapsible-stats-section">
+          <div class="collapsible-content" id="collapsible-content">
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">Achieved Accounts</span>
+                  <span class="stat-card-change positive"
+                    >+89 <i class="arrow"></i
+                  ></span>
+                </div>
+                <div class="stat-card-comparison">
+                  <div class="thismonth">
+                    <span>This Month</span>
+                    <div class="value">2317</div>
+                  </div>
+                  <div class="lastmonth">
+                    <span>Last Month</span>
+                    <div class="value">2228</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="devider"></div>
+
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">Market Share</span>
+                  <span class="stat-card-change positive"
+                    >+1.19% <i class="arrow"></i
+                  ></span>
+                </div>
+                <div class="stat-card-comparison">
+                  <div class="thismonth">
+                    <span>This Month</span>
+                    <div class="value">52.35%</div>
+                  </div>
+                  <div class="lastmonth">
+                    <span>Last Month</span>
+                    <div class="value">51.54%</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="devider"></div>
+
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">Sales</span>
+                  <span class="stat-card-change negative"
+                    >-2.06cr <i class="arrow"></i
+                  ></span>
+                </div>
+                <div class="stat-card-comparison">
+                  <div class="thismonth">
+                    <span>This Month</span>
+                    <div class="value">2.84cr</div>
+                  </div>
+                  <div class="lastmonth">
+                    <span>Last Month</span>
+                    <div class="value">4.90cr</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="devider"></div>
+
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">Target</span>
+                  <span class="stat-card-change negative"
+                    >-14.81% <i class="arrow"></i
+                  ></span>
+                </div>
+                <div class="stat-card-comparison">
+                  <div class="thismonth">
+                    <span>This Month</span>
+                    <div class="value">29.58%</div>
+                  </div>
+                  <div class="lastmonth">
+                    <span>Last Month</span>
+                    <div class="value">44.39%</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="devider"></div>
+
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">Hard Avg Int/day</span>
+                  <span class="stat-card-change positive"
+                    >+1.88% <i class="arrow"></i
+                  ></span>
+                </div>
+                <div class="stat-card-comparison">
+                  <div class="thismonth">
+                    <span>This Month</span>
+                    <div class="value">79.7%</div>
+                  </div>
+                  <div class="lastmonth">
+                    <span>Last Month</span>
+                    <div class="value">77.82%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">Coverage</span>
+                  <span class="stat-card-change negative"
+                    >-16.57% <i class="arrow"></i
+                  ></span>
+                </div>
+                <div class="stat-card-comparison">
+                  <div class="thismonth">
+                    <span>This Month</span>
+                    <div class="value">45.19%</div>
+                  </div>
+                  <div class="lastmonth">
+                    <span>Last Month</span>
+                    <div class="value">61.76%</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="devider"></div>
+
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">Campaigns</span>
+                  <span class="stat-card-change negative"
+                    >-557 <i class="arrow"></i
+                  ></span>
+                </div>
+                <div class="stat-card-comparison">
+                  <div class="thismonth">
+                    <span>This Month</span>
+                    <div class="value">690</div>
+                  </div>
+                  <div class="lastmonth">
+                    <span>Last Month</span>
+                    <div class="value">1247</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="devider"></div>
+
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">Known</span>
+                  <span class="stat-card-change negative"
+                    >-180 <i class="arrow"></i
+                  ></span>
+                </div>
+                <div class="stat-card-comparison">
+                  <div class="thismonth">
+                    <span>This Month</span>
+                    <div class="value">244</div>
+                  </div>
+                  <div class="lastmonth">
+                    <span>Last Month</span>
+                    <div class="value">424</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="devider"></div>
+
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">Un-known</span>
+                  <span class="stat-card-change negative"
+                    >-373 <i class="arrow"></i
+                  ></span>
+                </div>
+                <div class="stat-card-comparison">
+                  <div class="thismonth">
+                    <span>This Month</span>
+                    <div class="value">446</div>
+                  </div>
+                  <div class="lastmonth">
+                    <span>Last Month</span>
+                    <div class="value">823</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="devider"></div>
+
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">AOV</span>
+                  <span class="stat-card-change positive"
+                    >+29.19L <i class="arrow"></i
+                  ></span>
+                </div>
+                <div class="stat-card-comparison">
+                  <div class="thismonth">
+                    <span>This Month</span>
+                    <div class="value">67.18L</div>
+                  </div>
+                  <div class="lastmonth">
+                    <span>Last Month</span>
+                    <div class="value">37.99L</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="devider"></div>
+
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">Frequency</span>
+                  <span class="stat-card-change positive"
+                    >+0.6 <i class="arrow"></i
+                  ></span>
+                </div>
+                <div class="stat-card-comparison">
+                  <div class="thismonth">
+                    <span>This Month</span>
+                    <div class="value">1.92</div>
+                  </div>
+                  <div class="lastmonth">
+                    <span>Last Month</span>
+                    <div class="value">1.86</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="reminders">
+              <div class="remindHeader">
+                <h2>
+                  <img src="./assets/images/reminders-bell.svg" alt="" />
+                  Reminders
+                </h2>
+                <ul class="how-many">
+                  <li><img src="./assets/images/rem1.png" alt="" /></li>
+                  <li><img src="./assets/images/rem2.png" alt="" /></li>
+                  <li><img src="./assets/images/rem3.png" alt="" /></li>
+                  <li><img src="./assets/images/rem4.png" alt="" /></li>
+                  <li><img src="./assets/images/rem5.png" alt="" /></li>
+                  <li><img src="./assets/images/rem6.png" alt="" /></li>
+                </ul>
+                <label for="" class="more-reminders">+12</label>
+                <a href="" class="show-all">Show all messages</a>
+              </div>
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="reminder-details">
+                      <div class="reminder-content">
+                        <i class="thumbnail"
+                          ><img src="./assets/images/mansion-house.png" alt=""
+                        /></i>
+                        <h3>Mansions Home Constructions & Realty</h3>
+                        <p>
+                          Today you have a face to face meeting with
+                          <strong>Mr. Parag Shinde</strong> and needs to
+                          finalize the deal today itself.
+                        </p>
+                      </div>
+                      <div class="reminder-actions">
+                        <button title="Call" class="reschedule">
+                          <img src="./assets/images/re-schedule.svg" alt="" />
+                        </button>
+                        <button title="Location" class="message">
+                          <img src="./assets/images/message.svg" alt="" />
+                        </button>
+                        <button title="Info" class="video-call">
+                          <img src="./assets/images/video-call.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="reminder-details">
+                      <div class="reminder-content">
+                        <i class="thumbnail"
+                          ><img src="./assets/images/brand4.png" alt=""
+                        /></i>
+                        <h3>Canara Bank Commercial Promotionals</h3>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Distinctio tempore eum
+                          <strong>Mrs. Abhilipsa Panda</strong> cupiditate
+                          similique voluptates pariatur mollitia at, fuga
+                          asperiores molestiae qui quos accusamus illum tempora
+                          consequatur voluptatem, eligendi, itaque voluptate.
+                        </p>
+                      </div>
+                      <div class="reminder-actions">
+                        <button title="Call" class="reschedule">
+                          <img src="./assets/images/re-schedule.svg" alt="" />
+                        </button>
+                        <button title="Location" class="message">
+                          <img src="./assets/images/message.svg" alt="" />
+                        </button>
+                        <button title="Info" class="video-call">
+                          <img src="./assets/images/video-call.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="reminder-details">
+                      <div class="reminder-content">
+                        <i class="thumbnail"
+                          ><img src="./assets/images/brand5.png" alt=""
+                        /></i>
+                        <h3>Amazon Online Shopping Offers Mela</h3>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Distinctio tempore eum cupiditate similique
+                          voluptates pariatur mollitia at, fuga asperiores
+                          molestiae qui quos accusamus illum tempora consequatur
+                          voluptatem, eligendi, itaque voluptate.
+                        </p>
+                      </div>
+                      <div class="reminder-actions">
+                        <button title="Call" class="reschedule">
+                          <img src="./assets/images/re-schedule.svg" alt="" />
+                        </button>
+                        <button title="Location" class="message">
+                          <img src="./assets/images/message.svg" alt="" />
+                        </button>
+                        <button title="Info" class="video-call">
+                          <img src="./assets/images/video-call.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prev-next">
+                  <button class="previous swiper-button-prev">
+                    <img src="./assets/images/next-arrow.svg" alt="" />
+                  </button>
+                  <span>Prev/Next</span>
+                  <button class="next swiper-button-next">
+                    <img src="./assets/images/next-arrow.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collapse-toggle" id="collapse-toggle">
+            <div class="arrow-container">
+              <div class="chevron"></div>
+              <div class="chevron"></div>
+              <div class="chevron"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Leader-board tree structure -->
+        <div class="leaderboard">
+          <div class="pageHead">
+            <h2><img src="./assets/images/effort-analysis-default.svg" alt=""> <span>Effort Analysis - Sales Tree</span></h2>
+            <ul class="levelMenu light-bg" id="sales-tree" role="tablist">
+              <li class="active" role="presentation" data-bs-toggle="tab" data-bs-target="#all-sales" role="tab" aria-controls="all-sales" aria-selected="true">
+                <i class="ico"
+                  ><img src="./assets/images/all-sales-icon.svg" alt=""
+                /></i>
+                <span>All Sales</span>
+              </li>
+              <li role="presentation" data-bs-toggle="tab" data-bs-target="#national" role="tab" aria-controls="national" aria-selected="false">
+                <i class="ico"
+                  ><img src="./assets/images/nat-sales-icon.svg" alt=""
+                /></i>
+                <span>National Sales</span>
+              </li>
+              <li role="presentation" data-bs-toggle="tab" data-bs-target="#metro" role="tab" aria-controls="metro" aria-selected="false">
+                <i class="ico"
+                  ><img src="./assets/images/metro-sales-icon.svg" alt=""
+                /></i>
+                <span>Metro Sales</span>
+              </li>
+              <li role="presentation" data-bs-toggle="tab" data-bs-target="#local" role="tab" aria-controls="local" aria-selected="false">
+                <i class="ico"
+                  ><img src="./assets/images/local-sales-icon.svg" alt=""
+                /></i>
+                <span>Local Sales</span>
+              </li>
+              <li role="presentation" data-bs-toggle="tab" data-bs-target="#local-tamil" role="tab" aria-controls="local-tamil" aria-selected="false">
+                <i class="ico"
+                  ><img src="./assets/images/local-tamil-sales-icon.svg" alt=""
+                /></i>
+                <span>Local Tamilnadu</span>
+              </li>
+              <li role="presentation" data-bs-toggle="tab" data-bs-target="#alpha" role="tab" aria-controls="alpha" aria-selected="false">
+                <i class="ico"
+                  ><img src="./assets/images/alpha-sales-icon.svg" alt=""
+                /></i>
+                <span>Alpha Sales</span>
+              </li>
+            </ul>
+          </div>
+          <div class="lboard-body">
+            <div class="leaders-list tab-content">
+              <div class="leader-group tab-pane fade show active" id="all-sales" role="tabpanel" aria-labelledby="all-sales-tab">
+                <div class="team-lead" data-first="Abhishek" data-last="Jaggi">
+                  <div class="leader-pic">
+                    <img src="./assets/images/leader1.jpg" alt="">
+                  </div>
+                  <h1>Mr. Abhishek Jaggi</h1>
+                  <h6>National Head</h6>
+                </div>
+
+                <!-- SubLevel Stream -->
+                <div class="next-level">
+                  <div class="team-head">
+                    <div class="head-pic">
+                      <img src="./assets/images/abhishek-varma.jpg" alt="">
+                    </div>
+                    <div class="head-details">
+                      <h1><span class="suffix">Mr.</span> <b>Abhishek Varma</b> <span class="br-count"><img src="./assets/images/brand-count.svg" alt=""> 20+</span></h1>
+                      <h6>Regional Lead - South</h6>
+
+                      <ul class="interactions">
+                        <li class="dir-meet"><img src="./assets/images/direct-meeting.svg" alt=""> 4</li>
+                        <li class="vir-meet"><img src="./assets/images/virtual-meeting.svg" alt=""> 6</li>
+                        <li class="ph-call"><img src="./assets/images/phone-call.svg" alt=""> 24</li>
+                        <li class="whats-chat"><img src="./assets/images/whatsapp.svg" alt=""> 3</li>
+                        <li class="email"><img src="./assets/images/email.svg" alt=""> 1</li>
+                      </ul>
+
+                      <div class="team-count"><span>4</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="leader-group tab-pane fade" id="national" role="tabpanel" aria-labelledby="national-tab">
+                <div class="team-lead" data-first="Ali" data-last="Abbas">
+                  <div class="leader-pic">
+                    <img src="./assets/images/leader3.jpg" alt="">
+                  </div>
+                  <h1>Mr. Ali Abbas</h1>
+                  <h6>State Head - AP & TG</h6>
+                </div>
+              </div>
+            </div>
+            <div class="executive-list">Hello</div>
+          </div>
+        </div>
+        <!-- tree structure End -->
+      </main>
+    </div>
+
+    <!-- Go To Top Arrow with Progressive scroll Button Start -->
+    <div class="progress-wrap">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+    <!-- Go To Top Arrow with Progressive scroll Button End -->
+
+    <!-- All Scripts-->
+    <script src="./assets/js/jquery.min.js"></script>
+    <script
+      src="./assets/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./assets/js/bootstrap-datepicker.min.js"
+    ></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/all-scripts.js"></script>
+  </body>
+</html>
