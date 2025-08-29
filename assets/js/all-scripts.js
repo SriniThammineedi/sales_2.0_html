@@ -340,25 +340,25 @@ document.querySelectorAll(".usr-list button").forEach((button) => {
 // OnClick toggle div from right
 const openBtn = document.getElementById("add-poc");
 const closeModal = document.getElementById("closeBtn");
-const panel = document.getElementById("sidePanel");
+const rightPanel = document.getElementById("sidePanel");
 
 openBtn.addEventListener("click", () => {
-  panel.classList.add("active");
+  rightPanel.classList.add("active");
 });
 
-panel.addEventListener("click", (e) => e.stopPropagation());
+rightPanel.addEventListener("click", (e) => e.stopPropagation());
 closeModal.addEventListener("click", (e) => {
   e.stopPropagation();
-  panel.classList.remove("active");
+  rightPanel.classList.remove("active");
 });
 
 document.addEventListener("click", (e) => {
   if (
-    panel.classList.contains("active") &&
-    !panel.contains(e.target) &&
+    rightPanel.classList.contains("active") &&
+    !rightPanel.contains(e.target) &&
     !openBtn.contains(e.target)
   ) {
-    panel.classList.remove("active");
+    rightPanel.classList.remove("active");
   }
 });
 
@@ -386,10 +386,4 @@ parentDivs.forEach((parent) => {
       contentDiv.classList.remove("show");
     }
   });
-});
-
-// Close Toggle modal on mobile devices
-closeBtn.addEventListener("click", function () {
-  contentDiv.style.display = "none";
-  contentDiv.classList.remove("show");
 });

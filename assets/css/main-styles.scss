@@ -3485,7 +3485,7 @@ body.dark-mode .levelMenu li {
             border-radius: 70px;
             @include flex-row-cent-start;
             position: relative;
-            transition: all 0.5s ease-in-out;
+            transition: all 0.2s ease-in-out;
             overflow: hidden;
             width: 90%;
             gap: 1rem;
@@ -3500,6 +3500,7 @@ body.dark-mode .levelMenu li {
 
               img {
                 max-width: 100%;
+                transition: all 0.2s ease-in-out;
               }
             }
 
@@ -3513,7 +3514,7 @@ body.dark-mode .levelMenu li {
                 font-weight: 600;
                 color: var(--text-primary);
                 @include flex-row-cent-start;
-                transition: all 0.5s ease-in-out;
+                transition: all 0.2s ease-in-out;
                 gap: 0.35rem;
                 white-space: nowrap;
 
@@ -3536,7 +3537,7 @@ body.dark-mode .levelMenu li {
                   background-color: var(--suffix-bg);
                   padding: 0.35rem 0.5rem;
                   border-radius: var(--border-radius-medium);
-                  transition: all 0.5s ease-in-out;
+                  transition: all 0.2s ease-in-out;
                   @include flex-row-centered;
                   line-height: 1;
                   gap: 0.25rem;
@@ -3551,7 +3552,7 @@ body.dark-mode .levelMenu li {
 
               .interactions {
                 @include flex-row-cent-start;
-                transition: all 0.5s ease-in-out;
+                transition: all 0.2s ease-in-out;
                 margin-top: 0.75rem;
                 gap: 0.15rem;
 
@@ -3560,7 +3561,7 @@ body.dark-mode .levelMenu li {
                   background-color: #f3f3f3;
                   border-radius: var(--border-radius-medium);
                   color: var(--text-primary);
-                  transition: all 0.5s ease-in-out;
+                  transition: all 0.2s ease-in-out;
                   padding: 0.2rem 0.6rem;
                   gap: 0.35rem;
 
@@ -3584,7 +3585,7 @@ body.dark-mode .levelMenu li {
               font-size: 18px;
               line-height: 1;
               @include flex-row-centered;
-              transition: all 0.5s ease-in-out;
+              transition: all 0.2s ease-in-out;
               border-radius: 100%;
 
               span {
@@ -3600,15 +3601,16 @@ body.dark-mode .levelMenu li {
               color: var(--text-light);
 
               h1 {
-                color: var(--text-light);
-
-                .suffix {
-                  color: #bf875c;
-                }
+                background: linear-gradient(to right, #ff6145 0%, #f09819 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
 
                 .br-count {
-                  background-color: #0587d3;
+                  background: #0587d3 !important;
                   color: var(--text-light);
+                  -webkit-text-fill-color: #fff;
+                  background-clip: #fff;
 
                   img {
                     filter: invert(1);
@@ -3622,8 +3624,21 @@ body.dark-mode .levelMenu li {
 
               .team-count {
                 right: 0.75rem;
-                background: linear-gradient(135deg, #00ce00 0%, #adde0b 100%);
+                background: linear-gradient(
+                  to right,
+                  #00ce00 0%,
+                  #d8900b 25%,
+                  #ff5100 50%,
+                  #0076c5 75%,
+                  #00ce00 100%
+                );
+                background-size: 400%;
+                transition: 0.5s;
                 color: var(--text-light);
+
+                &:hover {
+                  animation: animate 8s linear infinite;
+                }
 
                 span {
                   margin-left: inherit;
@@ -3642,7 +3657,7 @@ body.dark-mode .levelMenu li {
               }
 
               li.vir-meet {
-                background-color: #7840C2;
+                background-color: #7840c2;
                 color: var(--text-light);
 
                 & img {
@@ -3651,7 +3666,7 @@ body.dark-mode .levelMenu li {
               }
 
               li.ph-call {
-                background-color: #CE6126;
+                background-color: #ce6126;
                 color: var(--text-light);
 
                 & img {
@@ -3660,7 +3675,7 @@ body.dark-mode .levelMenu li {
               }
 
               li.whats-chat {
-                background-color: #5C8B2E;
+                background-color: #5c8b2e;
                 color: var(--text-light);
 
                 & img {
@@ -3669,12 +3684,16 @@ body.dark-mode .levelMenu li {
               }
 
               li.email {
-                background-color: #B95252;
+                background-color: #b95252;
                 color: var(--text-light);
 
                 & img {
                   filter: none;
                 }
+              }
+
+              img {
+                transform: scale(1.1);
               }
             }
           }
@@ -3687,7 +3706,79 @@ body.dark-mode .levelMenu li {
       width: calc(100% - 33%);
       max-height: 100%;
       overflow-y: auto;
+
+      .tab-pane{
+        @include flex-row-centered;
+        position: relative;
+        flex-wrap: wrap;
+        height: -webkit-fill-available;
+        gap: 1rem;
+
+        .executive{
+            @include flex-col-center;
+            position: relative;
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius-medium);
+            padding: 1rem;
+
+            .profile-pic {
+              width: 70px;
+              height: 70px;
+              border-radius: 50%;
+              object-fit: fill;
+            }
+
+            h1{
+                font-size: 18px;
+                font-weight: 500;
+                text-align: center;
+                color: var(--text-primary);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 70%;
+            }
+
+            h6{
+                font-size: 13px;
+                font-weight: 500;
+                text-align: center;
+                color: var(--text-dark-gray);
+            }
+
+            .interactions {
+                @include flex-row-cent-start;
+                transition: all 0.2s ease-in-out;
+                margin-top: 0.75rem;
+                gap: 0.15rem;
+
+                li {
+                  @include flex-row-centered;
+                  background-color: #f3f3f3;
+                  border-radius: var(--border-radius-medium);
+                  color: var(--text-primary);
+                  transition: all 0.2s ease-in-out;
+                  padding: 0.2rem 0.5rem;
+                  gap: 0.25rem;
+
+                  img {
+                    filter: invert(1);
+                    width: 13px;
+                  }
+                }
+              }
+        }
+      }
     }
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
   }
 }
 
